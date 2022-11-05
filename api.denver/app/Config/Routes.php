@@ -40,6 +40,14 @@ $routes->resource('terapeuta');
 $routes->post('terapeuta/update/(:segment)', 'Terapeuta::update/$1');
 $routes->resource('infante');
 $routes->post('infante/update/(:segment)', 'Infante::update/$1');
+$routes->resource('padre');
+$routes->post('padre/update/(:segment)', 'Padre::update/$1');
+$routes->resource('topico');
+$routes->post('topico/update/(:segment)', 'Topico::update/$1');
+$routes->resource('respuesta');
+$routes->post('respuesta/update/(:segment)', 'Respuesta::update/$1');
+$routes->resource('actividad');
+$routes->post('actividad/update/(:segment)', 'Actividad::update/$1');
 
 /*
  * --------------------------------------------------------------------

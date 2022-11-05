@@ -4,7 +4,7 @@ use CodeIgniter\RESTful\ResourceController;
 use App\Models\TopicoModel;
 
 
-class Terapeuta extends ResourceController{
+class Topico extends ResourceController{
     protected $modelName = 'App\Models\TopicoModel';
     protected $format = 'json';
 
@@ -20,7 +20,7 @@ class Terapeuta extends ResourceController{
 
         $topico = $this->model->find($id);
         $data=[
-            "padres" => [
+            "topico" => [
                 "id" => $topico["id"],
                 "nombre" => $topico["nombre"],
                 "nivel" => $topico["nivel"]
