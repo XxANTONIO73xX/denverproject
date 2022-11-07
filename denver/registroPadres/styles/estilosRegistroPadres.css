@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Nunito', sans-serif;;
+}
+
+body {
+    background-color: #008783;
+}
+
+.register-box {
+    background-color: white;
+    position: relative;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 700px;
+    height: 680px;
+    top: 10px;
+}
+
+    .register-box .register-content {
+        position: relative;
+        margin: 0 auto;
+        top: 30px;
+        width: 90%;
+        height: 90%;
+    }
+
+    .register-box .register-content .logo {
+        text-align: center;
+        height: 150px;
+    }
+
+        .register-box .register-content .logo img {
+            width: 160px;
+        }
+
+    .register-box .register-content form {
+        position: relative;
+        top: 0;
+    }
+
+        .register-box .register-content form .tag {
+            position: relative;
+            background-color: white;
+            top: 10px;
+            left: 15px;
+            width: 160px;
+            text-align: center;
+        }
+
+            .register-box .register-content form .tag p {
+                font-size: 15px;
+                color: rgba(185, 120, 0, 0.801);
+            }
+
+        .register-box .register-content form .content-padre_box {
+            border: solid 2px rgba(185, 120, 0, 0.359);
+            height: 270px;
+            border-radius: 10px;
+        }
+
+            .register-box .register-content form .content-padre_box .nombre-padre input, 
+            .register-box .register-content form .content-padre_box .contrasena input {
+                background-color: white;
+                position: relative;
+                top: 5px;
+                width: 48%;
+                float: left;
+                margin-left: 7px;
+                height: 50px;
+                border: none;
+                outline: none;
+                border-bottom: solid 2px rgba(185, 120, 0, 0.411);
+                font-size: 15px;
+            }
+
+            .register-box .register-content form .content-padre_box .correo input,
+            .register-box .register-content form .content-padre_box .telefono input,
+            .register-box .register-content form .content-padre_box .direccion input {
+                background-color: white;
+                position: relative;
+                top: 5px;
+                width: 97%;
+                margin-left: 7px;
+                height: 50px;
+                border: none;
+                outline: none;
+                border-bottom: solid 2px rgba(185, 120, 0, 0.411);
+                font-size: 15px;
+            }
+
+        .register-box .register-content form .tag-nino {
+            position: relative;
+            background-color: white;
+            top: 10px;
+            left: 15px;
+            width: 160px;
+            text-align: center;
+        }
+    
+            .register-box .register-content form .tag-nino p {
+                font-size: 15px;
+                color: #30D100;
+            }
+    
+            .register-box .register-content form .content-nino_box {
+                border: solid 2px #30D100;
+                height: 130px;
+                border-radius: 10px;
+            }    
+
+                .register-box .register-content form .content-nino_box .nombre-nino input {
+                    background-color: white;
+                    position: relative;
+                    top: 5px;
+                    width: 48%;
+                    float: left;
+                    margin-left: 7px;
+                    height: 50px;
+                    border: none;
+                    outline: none;
+                    border-bottom: solid 2px #30D100;
+                    font-size: 15px;
+                }
+
+                .register-box .register-content form .content-nino_box .datos-nino .edad input{
+                    background-color: white;
+                    position: relative;
+                    top: 5px;
+                    width: 16%;
+                    float: left;
+                    margin-left: 7px;
+                    height: 50px;
+                    border: none;
+                    outline: none;
+                    border-bottom: solid 2px #30D100;
+                    font-size: 15px;
+                }
+
+                .register-box .register-content form .content-nino_box .datos-nino .curp input {
+                    background-color: white;
+                    position: relative;
+                    top: 5px;
+                    width: 80%;
+                    float: left;
+                    margin-left: 7px;
+                    height: 50px;
+                    border: none;
+                    outline: none;
+                    border-bottom: solid 2px #30D100;
+                    font-size: 15px;
+                }
+
+        .register-box .register-content form .boton-register {
+            position: relative;
+            width: 100%;
+            top: 15px;
+            margin: 0 auto;
+            width: 50%;
+        }            
+
+        .register-box .register-content form .boton-register button {
+            background-color: #eb6200;
+            width: 100%;
+            height: 30px;
+            border-radius: 30px;
+            border: none;
+            transition: 0.5s;
+            color: white;
+        }
+
+        .register-box .register-content form .boton-register button:hover {
+            background-color: #da814a;
+            cursor: pointer;
+            box-shadow: 1px 1px 5px black;
+            transition: 0.25s;
+        }
+
+        
