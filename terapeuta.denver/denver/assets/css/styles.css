@@ -1,0 +1,85 @@
+main{
+    position: fixed;
+    width: 84%;
+    display: inline-block;
+    overflow: scroll;
+    margin: 7px;
+    height: 650px;
+}
+.conteiner-main{
+    font-family: sans-serif;
+}
+.title{
+    font-size: 30px;
+}
+.title h1{
+    text-shadow: 2px -2px 7px gray;
+}
+.title hr{
+    margin: 20px 0px;
+}
+.table{
+    width: 95%;
+    border: 1px solid gray;
+    margin: 0 auto;
+    color: black;
+}
+
+table thead tr th{
+    background: rgb(25,25,204);
+    background: linear-gradient(180deg, rgba(25,25,204,1) 0%, rgba(25,108,204,1) 25%, rgba(25,144,204,1) 50%, rgba(25,192,204,1) 75%, rgba(25,204,176,1) 100%);
+    color: white;
+}
+
+.table #table_wrapper #table_length, .table #table_wrapper #table_filter{
+    margin: 15px;
+}
+
+#editar, #ver, #eliminar{
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+#editar{
+    background-color: #ffc107;
+    border-color:    #ffc107;
+    margin-left: 4px;
+    margin-right: 1px;
+}
+
+#ver{
+    background-color: #007bff;
+    border-color:    #007bff;
+}
+
+#eliminar{
+    background-color: #dc3545;
+    border-color:    #dc3545;
+    margin-right: 5px;
+}
+
+.sorting_1{
+    text-align: center;
+}
+
+.add{
+    float: right;
+    margin-right: 40px;
+    font-family: sans-serif;
+}
+
+.add #agregar{
+    margin-top: 15px;
+    width: 250px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
