@@ -38,6 +38,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->resource('terapeuta');
 $routes->post('terapeuta/update/(:segment)', 'Terapeuta::update/$1');
+$routes->post('terapeuta/login', 'Terapeuta::login');
 $routes->resource('infante');
 $routes->post('infante/update/(:segment)', 'Infante::update/$1');
 $routes->resource('padre');

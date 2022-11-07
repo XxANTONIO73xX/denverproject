@@ -71,4 +71,18 @@ class Terapeuta extends ResourceController{
         }
     }
 
+    public function login(){
+        $email = $this->request->getPost("email");
+        $pass = $this->request->getPost("password");
+
+        $terapeuta = $this->model->login($email, $pass);
+        if($terapeuta){
+            return $this->respond([
+                "user" => $terapeuta
+            ]);
+        }else{
+            return $this->respond(["Error" => "Usuario y contrasña incorrectos"]);
+        }
+    }
+
 }

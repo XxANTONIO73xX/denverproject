@@ -1,25 +1,23 @@
 <?php
 namespace App\Controllers;
-
 use App\Models\TopicoModel;
-use CodeIgniter\Database\MySQLi\Result;
 use CodeIgniter\RESTful\ResourceController;
+use App\Models\ActividadModel;
+class Actividad extends ResourceController{
 
-class Padre extends ResourceController{
-
-    protected $modelNmae = 'App\Models\ActividadModel';
+    protected $modelName = 'App\Models\ActividadModel';
     protected $format = 'json';
 
     public function index(){
-        $topicoModel = new TopicoModel();
         $actividades = $this->model->findAll();
+        $topicoModel = new TopicoModel();
         $data["actividades"] = [];
-        foreach($actividades as $idActividad => $actividad){
-            $data["padres"][] = [
+        foreach($actividades as $actividad){
+            $data["actividades"][] = [
                 "id" => $actividad["id"],
                 "nombre" => $actividad["nombre"],
                 "descripcion" => $actividad["descripcion"],
-                "idTopico" => $topicoModel->find($actividad["idTopico"])
+                "topico" => $topicoModel->find($actividad["idTopico"])
             ];
         }
         return $this->respond($data);
@@ -34,7 +32,7 @@ class Padre extends ResourceController{
                 "id" => $actividad["id"],
                 "nombre" => $actividad["nombre"],
                 "descripcion" => $actividad["descripcion"],
-                "idTopico" => $topicoModel->find($actividad["idTopico"])
+                "topico" => $topicoModel->find($actividad["idTopico"])
             ]            
         ];
         return $this->respond($data);
