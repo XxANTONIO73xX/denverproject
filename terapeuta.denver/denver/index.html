@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="../jquery/jquery-3.6.1.min.js"></script>
     <script src="https://kit.fontawesome.com/7a089fb5de.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
 </head>
 <body>
+
     <!--------------------------------------------------MODAL PARA AGREGAR-------------------------------------------------->
     <div class="modal-bg">
         <div class="modal-container">
@@ -50,16 +53,39 @@
                             </select>
                         </div>
                     </div>
-                    <div class="botones-accion">
-                        <button class="btn-cancelar">Cancelar</button>
-                        <button class="btn-agregar">Agregar</button>
-                    </div>
                 </form>
+                <div class="botones-accion">
+                    <button onclick="cerrarModalEditar()" class="btn-cancelar">Cancelar</button>
+                    <button class="btn-agregar" onclick="quedoAgregado()">Agregar</button>
+                </div>
             </div>
         </div>
     </div>
-     <!--------------------------------------------------MODAL PARA VISUALIZAR-------------------------------------------------->
-     
+    <!--------------------------------------------------MODAL PARA VISUALIZAR-------------------------------------------------->
+    <div class="modal-visualizar_bg">
+        <div class="modal-visualizar_container">
+            <div class="modal-visualizar_box">
+                <div class="nombre-actividad">
+                    <h2>Actividad 1</h2>
+                </div>
+                <div class="descripcion-actividad">
+                    <p>Puede ser en respuesta a una pista del adulto para empezar pero apilar 3 ó más bloques independientemente. </p>
+                </div>
+                <div class="topico-nivel">
+                    <div class="topico">
+                        <h2>Habilidades Sociales</h2>
+                    </div>
+                    <div class="nivel">
+                        <h2>Nivel 4</h2>
+                    </div>
+                </div>
+                <div class="botones">
+                    <button onclick="cerrarModalVisualizar()" class="btn-cancelar">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------------------MODAL PARA ELIMINAR-------------------------------------------------->
     <script src="../generalAssest/js/cargarHeader.js"></script>
     <main>
         <div class="conteiner-main">
@@ -87,6 +113,7 @@
             </div>
         </div>
     </main>
+    
     <script src="assets/js/dataTable.js"></script>
     <script src="/generalAssest/js/verify.js"></script>
     <script src="./assets/js/botones.js"></script>

@@ -10,7 +10,7 @@ $(document).ready( function () {
             {"data": 'descripcion'},
             {"data": 'topico.nombre'},
             {"data": 'topico.nivel'},
-            {"targets": -1, "data":null, "defaultContent":'<button id="editar"><i class="fa-solid fa-pen-to-square"></i></button> <button id="eliminar"><i class="fa-solid fa-trash"></i></i></button><button id="ver"><i class="fa-solid fa-eye"></i></button>'},
+            {"targets": -1, "data":null, "defaultContent":'<button onclick="abrirModalEditar()" id="editar"><i class="fa-solid fa-pen-to-square"></i></button> <button onclick="quedoEliminado()" id="eliminar"><i class="fa-solid fa-trash"></i></i></button> <button onclick="abrirModalVisualizar()" id="ver"><i class="fa-solid fa-eye"></i></button>'},
         ]
     });
 } );
