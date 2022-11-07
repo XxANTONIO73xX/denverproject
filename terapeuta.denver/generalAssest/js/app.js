@@ -5,7 +5,6 @@ if(sessionStorage.getItem('usuario') !== null){
 $("#login").click(function () { 
     let email = $("#email").val();
     let pass = $("#password").val();
-    alert("medio")
     $.ajax({
         type: "POST",
         url: "http://localhost/api.denver/public/terapeuta/login",
