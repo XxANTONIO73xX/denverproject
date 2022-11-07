@@ -43,13 +43,15 @@ $routes->resource('infante');
 $routes->post('infante/update/(:segment)', 'Infante::update/$1');
 $routes->resource('padre');
 $routes->post('padre/update/(:segment)', 'Padre::update/$1');
+$routes->post('padre/login', 'Padre::login');
 $routes->resource('topico');
+$routes->get('topicos/levels', 'Topico::resultByLevels');
 $routes->post('topico/update/(:segment)', 'Topico::update/$1');
 $routes->resource('respuesta');
 $routes->post('respuesta/update/(:segment)', 'Respuesta::update/$1');
 $routes->resource('actividad');
 $routes->post('actividad/update/(:segment)', 'Actividad::update/$1');
-
+$routes->get('actividades/bytopic/(:segment)', 'Actividad::getByTopico/$1');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

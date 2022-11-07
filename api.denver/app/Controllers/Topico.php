@@ -71,6 +71,12 @@ class Topico extends ResourceController{
         }
     }
 
+    public function resultByLevels(){
+        $data["niveles"] = $this->model->getLevels();
+        $data["topicos"] = $this->model->orderByLevels();
+        return $this->respond($data);
+    }
+
 }
 
 ?>

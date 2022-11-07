@@ -82,5 +82,11 @@ class Actividad extends ResourceController{
         }
     }
         
+    public function getByTopico($idTopico){
+        $result["actividades"] = $this->model->getByTopico($idTopico);
+        $topicoModel = new TopicoModel();
+        $result["topico"] = $topicoModel->find($idTopico);
+        return $this->respond($result);
+    }
 
 }

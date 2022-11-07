@@ -14,4 +14,12 @@ class PadreModel extends Model{
         "pass",  
         "idInfante",
     ];
+
+    public function login($email, $pass){
+        $result = $this->asArray()->where([
+            "correo" => $email,
+            "pass" => $pass
+        ])->first();
+        return $result;
+    }
 }

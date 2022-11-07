@@ -106,6 +106,19 @@ class Padre extends ResourceController{
             return $this->respond((["error" => "Hubo un error al eliminar"]));
         }
     }
-        
+    
+    public function login(){
+        $email = $this->request->getPost("email");
+        $pass = $this->request->getPost("password");
+
+        $padre = $this->model->login($email, $pass);
+        if($padre){
+            return $this->respond([
+                "user" => $padre
+            ]);
+        }else{
+            return $this->respond(["Error" => "Usuario y contrasña incorrectos"]);
+        }
+    }
 
 }

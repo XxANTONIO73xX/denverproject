@@ -11,4 +11,9 @@ class ActividadModel extends Model{
         "descripcion",
         "idTopico"
     ];
+
+    public function getByTopico($id){
+        $list = $this->asArray()->where(["idTopico" => $id])->findAll();
+        return $list;
+    }
 }
