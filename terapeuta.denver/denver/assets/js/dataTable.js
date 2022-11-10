@@ -1,7 +1,7 @@
 $(document).ready( function () {
     $('#table').DataTable({
         ajax: {
-            "url": 'http://localhost/api.denver/public/actividad',
+            "url": 'https://denvermx.online/public/actividad',
             "dataSrc": 'actividades',
             "type":'GET'
         },
