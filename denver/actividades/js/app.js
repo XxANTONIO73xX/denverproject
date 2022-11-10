@@ -61,20 +61,23 @@ function cargarActividades(idTopico){
             </div>
             <div class="activities-descripcion">
                 <p>${actividad.descripcion}</p>
+                <button id="responder-button" onclick="mostrarResponder()">Responder</button>
             </div>
-            <div class="select-nino">
-                <select name="" id="select-desempeno">
-                    <option value="">Lo hace solo</option>
-                    <option value="">Lo hace con ayuda</option>
-                    <option value="">No lo hace</option>
-                </select>
-            </div>
-            <div class="subir-archivos">
-                <div class="file-upload">     
-                    <div class="image-upload-wrap">
-                        <input class="file-upload-input" type='file'>
-                        <div class="drag-text">
-                            <h3>Suelta el archivo aquí</h3>
+            <div id="act-respuestas" class="activities-respuesta">
+                <div class="select-nino">
+                    <select name="" id="select-desempeno">
+                        <option value="">Lo hace solo</option>
+                        <option value="">Lo hace con ayuda</option>
+                        <option value="">No lo hace</option>
+                    </select>
+                </div>
+                <div class="subir-archivos">
+                    <div class="file-upload">     
+                        <div class="image-upload-wrap">
+                            <input class="file-upload-input" type='file'>
+                            <div class="drag-text">
+                                <h3>Suelta el archivo aquí</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -82,4 +85,9 @@ function cargarActividades(idTopico){
         </div>`
         })
     });
+}
+
+function mostrarResponder() {
+    element = document.getElementById("act-respuestas");
+    element.style.display='block';
 }

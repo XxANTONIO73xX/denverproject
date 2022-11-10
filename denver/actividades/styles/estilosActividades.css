@@ -76,6 +76,12 @@ header nav .nav-bar {
 /*--------------------------------------------------------- LISTA ACTIVIDADES ---------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------------------------------------------*/
 
+.page-container {
+    position: relative;
+    margin: 0 auto;
+    width: 1350px;
+}
+
 main{
     margin: 0 auto;
 }
@@ -87,7 +93,6 @@ main aside .index-levels{
     height: 600px;
     width: 250px;
     border-radius: 10px;
-    margin-left: 95px;
     overflow-y: scroll;
 }
 
@@ -162,7 +167,6 @@ main .activities-container {
     width: 1050px;
     border-radius: 10px;
     float: right;
-    margin-right: 100px;
 }
 
     main .activities-container .topico-cont {
@@ -186,9 +190,9 @@ main .activities-container {
     main .activities-container .activities-box {
         position: relative;
         top: 30px;
-        background-color: white;
+        background-color: rgb(221, 238, 255);
         margin: 10px 0px auto;
-        height: 220px;
+        height: auto;
         width: 100%;
         border-radius: 10px;
         text-align: left;
@@ -199,7 +203,7 @@ main .activities-container {
             margin: 0 auto;
             width: 95%;
             top: 10px;
-            height: 50px;
+            height: auto;
             border-bottom: solid 2px black;
         }
 
@@ -212,19 +216,47 @@ main .activities-container {
             margin: 0 auto;
             width: 95%;
             top: 15px;
+            min-height: 115px;
         }
 
-        main .activities-container .activities-box .select-nino {
-            position: relative;
-            top: 20px;
-            left: 15px;
+        .hidden-class {
+            display: visible;
         }
 
-            main .activities-container .activities-box .select-nino select {
+        .visible-class {
+            display: block;
+        }
+
+            main .activities-container .activities-box .activities-descripcion p {
+                height: auto;
+            }
+
+            main .activities-container .activities-box .activities-descripcion button {
+                position: relative;
+                top: 5px;
+                width: 120px;
+                height: 20px;
+            }
+
+        main .activities-container .activities-box .activities-respuesta {
+            display: none;
+            height: 130px;
+            width: 95%;
+            top: 15px;
+        }
+
+        main .activities-container .activities-box .activities-respuesta .select-nino {
+            position: absolute;
+            width: 100%;
+            left: 25px;
+            bottom: 100px;
+        }
+
+            main .activities-container .activities-box .activities-respuesta .select-nino select {
                 width: 95%;
             }
 
-        main .activities-container .activities-box .subir-archivos {
+        main .activities-container .activities-box .activities-respuesta .subir-archivos {
             position: absolute;
             width: 100%;
             height: 60px;
@@ -233,12 +265,11 @@ main .activities-container {
 
         .file-upload {
             position: absolute;
-            top: 0;
-            right: 5px;
+            bottom: 10px;
+            left: 5px;
             width: 100%;
             height: 60px;
             padding: 20px;
-            bottom: 10px;
         }
         
         .file-upload-btn:active {
