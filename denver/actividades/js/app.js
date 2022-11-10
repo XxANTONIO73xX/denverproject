@@ -1,6 +1,6 @@
 $.ajax({
     type: "GET",
-    url: "http://localhost/api.denver/public/topicos/levels",
+    url: "https://denvermx.online/public/topicos/levels",
     dataType: "json",
 }).done(function(data){
     index = document.getElementsByClassName("index");
@@ -39,7 +39,7 @@ $.ajax({
 function cargarActividades(idTopico){
     $.ajax({
         type: "GET",
-        url: "http://localhost/api.denver/public/actividades/bytopic/"+idTopico,
+        url: "https://denvermx.online/public/actividades/bytopic/"+idTopico,
         dataType: "json",
     }).done(function(data){
         topicoContent = document.getElementById("topico-cont")

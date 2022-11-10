@@ -7,7 +7,7 @@ $("#login").click(function () {
     let pass = $("#password").val();
     $.ajax({
         type: "POST",
-        url: "http://localhost/api.denver/public/padre/login",
+        url: "https://denvermx.online/public/padre/login",
         data: {
             "email": email,
             "password": pass
