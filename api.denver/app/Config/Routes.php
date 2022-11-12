@@ -52,6 +52,7 @@ $routes->post('respuesta/update/(:segment)', 'Respuesta::update/$1');
 $routes->resource('actividad');
 $routes->post('actividad/update/(:segment)', 'Actividad::update/$1');
 $routes->get('actividades/bytopic/(:segment)', 'Actividad::getByTopico/$1');
+$routes->post('actividades/insertar', 'Actividad::insertar');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

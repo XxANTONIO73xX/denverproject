@@ -17,7 +17,8 @@ class Actividad extends ResourceController{
                 "id" => $actividad["id"],
                 "nombre" => $actividad["nombre"],
                 "descripcion" => $actividad["descripcion"],
-                "topico" => $topicoModel->find($actividad["idTopico"])
+                "topico" => $topicoModel->find($actividad["idTopico"]),
+                "ejemplo" => $actividad["ejemplo"]
             ];
         }
         return $this->respond($data);
@@ -40,11 +41,31 @@ class Actividad extends ResourceController{
     }
 
     public function create(){
-
+        helper(['form']);
+        $file = $this->request->getFile('ejemplo');
+        if(! $file->isValid())
+            return $this->request->getFile('ejemplo');
+        $file->move('./uploads/ejemplos');
         $data=[
                 "nombre" => $this->request->getPost("nombre"),
                 "descripcion" => $this->request->getPost("descripcion"),
-                "idTopico" => $this->request->getPost("idTopico")           
+                "idTopico" => $this->request->getPost("idTopico"),
+                "ejemplo" => "https://denvermx.online/public/uploads/ejemplos/".$file->getName()        
+        ];
+        $id = $this->model->insert($data);
+
+        if($id){
+            return $this->respond($this->model->find($id));
+        }else{
+            return $this->respond(["error" => "hubo un error al insertar"]);
+        }
+    }
+
+    public function insertar(){
+        $data=[
+            "nombre" => $this->request->getPost("nombre"),
+            "descripcion" => $this->request->getPost("descripcion"),
+            "idTopico" => $this->request->getPost("idTopico")           
         ];
         $id = $this->model->insert($data);
 
@@ -56,6 +77,7 @@ class Actividad extends ResourceController{
     }
 
     public function update($id = NULL){
+        helper(['form', 'array']);
         $data = [];
         if(!empty($this->request->getPost("nombre")))
             $data["nombre"] = $this->request->getPost("nombre");
@@ -63,7 +85,14 @@ class Actividad extends ResourceController{
             $data["descripcion"] = $this->request->getPost("descripcion");
         if(!empty($this->request->getPost("idTopico")))
             $data["idTopico"] = $this->request->getPost("idTopico");
-
+        if(!empty($this->request->getFile('ejemplo'))){
+            $fileName = dot_array_search('ejemplo.name', $_FILES);
+            $file = $this->request->getFile('ejemplo');
+            if(! $file->isValid())
+            return $this->fail($file->getErrorString());
+            $file->move('./uploads/ejemplos');
+            $data["ejemplo"] = "https://denvermx.online/public/uploads/ejemplos/".$file->getName();
+        }
         $result = $this->model->update($id, $data);
 
         if($result){

@@ -11,5 +11,6 @@ class RespuestaModel extends Model{
         "idActividad",
         "idTopico",
         "respuestaUsuario",
+        "evidencia"
     ];
 }

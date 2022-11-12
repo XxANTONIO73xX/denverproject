@@ -9,7 +9,8 @@ class ActividadModel extends Model{
         "id",
         "nombre",
         "descripcion",
-        "idTopico"
+        "idTopico",
+        "ejemplo"
     ];
 
     public function getByTopico($id){

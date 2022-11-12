@@ -2,6 +2,7 @@
 namespace App\Controllers;
 use CodeIgniter\RESTful\ResourceController;
 use App\Models\RespuestaModel;
+use CodeIgniter\Commands\Help;
 use CodeIgniter\HTTP\Response;
 
 class Respuesta extends ResourceController{
@@ -23,11 +24,17 @@ class Respuesta extends ResourceController{
 
     public function create()
     {
+        helper(['form']);
+        $file = $this->request->getFile('evidencia');
+        if(! $file->isValid())
+            return $this->fail($file->getErrorString());
+        $file->move('/public/uploads/respuestas');
         $data=[
             "idPadre" => $this->request->getPost("idPadre"),
             "idActividad" => $this->request->getPost("idActividad"),
             "idTopico" => $this->request->getPost("idTopico"),
             "respuestaUsuario" => $this->request->getPost("respuestaUsuario"),
+            "evidencia" => "public/uploads/respuestas/".$file->getName()
         ];
 
         $id = $this->model->insert($data);
@@ -40,6 +47,7 @@ class Respuesta extends ResourceController{
     }
 
     public function update($id = null){
+        helper(['form', 'array']);
         $data = [];
         if(!empty($this->request->getPost("idPadre")))
             $data["idPadre"] = $this->request->getPost("idPadre");
@@ -49,7 +57,14 @@ class Respuesta extends ResourceController{
             $data["idTopico"] = $this->request->getPost("idTopico");
         if(!empty($this->request->getPost("respuestaUsuario")))
             $data["respuestaUsuario"] = $this->request->getPost("respuestaUsuario");
-        
+        if(!empty($this->request->getFile('evidencia'))){
+            $fileName = dot_array_search('evidencia.name', $_FILES);
+            $file = $this->request->getFile('evidencia');
+            if(! $file->isValid())
+            return $this->fail($file->getErrorString());
+            $file->move('/public/uploads/respuestas');
+            $data["evidencia"] = "public/uploads/respuestas/".$file->getName();
+        }
         $result = $this->model->update($id, $data);
 
         if($result){
