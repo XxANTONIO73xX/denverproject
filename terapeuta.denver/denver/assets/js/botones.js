@@ -3,12 +3,12 @@ function showContent() {
     selectTopico = document.getElementById("selectTopico");
     check = document.getElementById("check");
     if (check.checked) {
-        element.style.display='block';
-        selectTopico.style.display='none';
+        element.style.display = 'block';
+        selectTopico.style.display = 'none';
     }
     else {
-        element.style.display='none';
-        selectTopico.style.display='block';
+        element.style.display = 'none';
+        selectTopico.style.display = 'block';
     }
 }
 
@@ -36,46 +36,45 @@ var modalBtn = document.querySelector('.boton-agregar_modal');
 var modalBg = document.querySelector('.modal-bg');
 var modalClose = document.querySelector('.btn-cancelar');
 
-modalBtn.addEventListener('click', function (){
+modalBtn.addEventListener('click', function () {
     modalBg.classList.add('bg-active');
 });
 
-modalClose.addEventListener('click', function (){
+modalClose.addEventListener('click', function () {
     modalBg.classList.remove('bg-active');
 });
+
 
 function quedoAgregado() {
 
     var modalBg = document.querySelector('.modal-bg');
     modalBg.classList.remove('bg-active');
 
-    Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'Se ha realizado correctamente',
-        showConfirmButton: false,
-        timer: 1500
+    $.ajax({
+        url: 'http://api.kikosbarbershop.online/public/cita',
+        type: 'POST',
+        data: {
+            "nombre": $("#nombre").val(),
+            "descripcion": $("#descripcion").val(),
+            "check": $("#check").val(),
+            "nombreTopico": $("#nombreTopico").val(),
+            "nivel": $("#nivel").val()
+        },
+        dataType: "json",
     })
+        .done(function (data, res) {
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Se ha agregado correctamente',
+                showConfirmButton: false,
+                timer: 1500
+            }).then(function () {
+                window.location.reload()
+            });
+        })
+        .fail(function () {
+            console.log("Error", "Ocurrio un problema al guardar la cita")
+        })
 
-}
-
-function quedoEliminado() {
-    Swal.fire({
-        title: '¿Estas seguro?',
-        text: "No se podrá recuperar",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Sí',
-        cancelButtonText: 'Cancelar'
-    }).then((result) => {
-        if (result.isConfirmed) {
-          Swal.fire(
-            '¡Borrado!',
-            'Se ha eliminado correctamente.',
-            'success'
-          )
-        }
-      })
 }

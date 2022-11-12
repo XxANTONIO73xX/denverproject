@@ -23,11 +23,11 @@
                     <div class="datos-actividad">
                         <div class="agregar-name_actividad">
                             <p>Nombre de Actividad:</p>
-                            <input type="text" name="" id="">
+                            <input type="text" name="" id="nombre">
                         </div>
                         <div class="agregar-descripcion_actividad">
                             <p>Descripción:</p>
-                            <input type="text" name="" id="">
+                            <input type="text" name="" id="descripcion">
                         </div>
                     </div>
                     <div class="topico-add">
@@ -38,18 +38,18 @@
                         <div id="createTopico" class="crear-topico_input">
                             <div class="topic">
                                 <p>Nombre de tópico</p>
-                                <input type="text">
+                                <input type="text" id="nombreTopico">
                             </div>
                             <div class="niv">
                                 <p>Nivel</p>
-                                <input type="text">
+                                <input type="text" id="nivel">
                             </div>
                         </div>
                         <div id="selectTopico" class="select-topico">
-                            <select name="" id="">
-                                <option value="">Tópico I</option>
-                                <option value="">Tópico II</option>
-                                <option value="">Tópico III</option>
+                            <select name="" id="select_topico">
+                                <option value="topico1">Tópico I</option>
+                                <option value="topico1">Tópico II</option>
+                                <option value="topico3">Tópico III</option>
                             </select>
                         </div>
                     </div>
@@ -100,6 +100,7 @@
                 <table id="table" class="cell-border display compact order-column">
                     <thead>
                         <tr>
+                            <th>Id</th>
                             <th>Nombre</th>
                             <th>Descripcion</th>
                             <th>Topico</th>
