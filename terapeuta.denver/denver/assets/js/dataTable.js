@@ -1,7 +1,7 @@
 $(document).ready( function () {
     var table = $('#table').DataTable({
         ajax: {
-            "url": 'https://denvermx.online/public/actividad',
+            "url": 'https://denvermx.online/api/public/actividad',
             "dataSrc": 'actividades',
             "type":'GET'
         },
@@ -28,7 +28,7 @@ $(document).ready( function () {
             if (result.isConfirmed) {
                 var data = table.row($(this).parents('tr')).data();
                 $.ajax({
-                    url: 'https://denvermx.online/public/actividad/' + data.id,
+                    url: 'https://denvermx.online/api/public/actividad/' + data.id,
                     type: 'DELETE',
                     dataType: "json",
                 })

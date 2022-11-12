@@ -1,4 +1,4 @@
-document.body.innerHTML += `
+/*document.body.innerHTML += `
 <link rel="stylesheet" href="../template/styles.css">
 <header>
     <div class="options">
@@ -23,4 +23,4 @@ document.body.innerHTML += `
             <li><a href="#">Evaluar</a></li>
         </ul>
     </nav>
-</aside>`;
+</aside>`;*/
