@@ -1,0 +1,344 @@
+* {
+    font-family: sans-serif;
+}
+
+main{
+    position: fixed;
+    width: 84%;
+    display: inline-block;
+    overflow: scroll;
+    margin: 7px;
+    height: 650px;
+    scroll-behavior: smooth;
+}
+
+.conteiner-main{
+    font-family: sans-serif;
+}
+
+.title{
+    font-size: 30px;
+}
+
+.title h1{
+    text-shadow: 2px -2px 7px gray;
+}
+
+.title hr{
+    margin: 20px 0px;
+}
+
+.table{
+    width: 95%;
+    border: 1px solid gray;
+    margin: 0 auto;
+    color: black;
+}
+
+table thead tr th{
+    background: rgb(25,25,204);
+    background: linear-gradient(180deg, rgba(25,25,204,1) 0%, rgba(25,108,204,1) 25%, rgba(25,144,204,1) 50%, rgba(25,192,204,1) 75%, rgba(25,204,176,1) 100%);
+    color: white;
+}
+
+.table #table_wrapper #table_length, .table #table_wrapper #table_filter{
+    margin: 15px;
+}
+
+#editar, #ver, #eliminar{
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+#editar{
+    background-color: #ffc107;
+    border-color:    #ffc107;
+    margin-left: 4px;
+    margin-right: 1px;
+}
+
+#ver{
+    background-color: #007bff;
+    border-color:    #007bff;
+}
+
+#eliminar{
+    background-color: #dc3545;
+    border-color:    #dc3545;
+    margin-right: 5px;
+}
+
+.sorting_1{
+    text-align: center;
+}
+
+.add{
+    float: right;
+    margin-right: 40px;
+    font-family: sans-serif;
+}
+
+.add #agregar{
+    margin-top: 15px;
+    width: 250px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------- MODAL --------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+
+.modal-bg {
+    background-color: rgba(0, 0, 0, 0.54);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 9000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s opacity 0.5s;
+}
+
+.bg-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+    .modal-bg .modal-container {
+        background-color: white;
+        border-radius: 10px;
+        position: relative;
+        margin: 0 auto;
+        top: 150px;
+        width: 600px;
+        height: 320px;
+    }
+
+        .modal-bg .modal-container .modal-box {
+            position: relative;
+            margin: 0 auto;
+            top: 10px;
+            width: 95%;
+            height: 95%;
+        }
+
+            .modal-bg .modal-container .modal-box form .datos-actividad {
+                width: 100%;
+            }
+
+                .modal-bg .modal-container .modal-box form .datos-actividad input {
+                    margin-top: 5px;
+                    width: 100%;
+                    height: 30px;
+                    outline: none;
+                }
+
+                .modal-bg .modal-container .modal-box form .datos-actividad p,
+                .modal-bg .modal-container .modal-box form .topico-add .crear-topico_input p {
+                    font-size: 20px;
+                }
+
+                .modal-bg .modal-container .modal-box form .datos-actividad .agregar-name_actividad,
+                .modal-bg .modal-container .modal-box form .datos-actividad .agregar-descripcion_actividad  {   
+                    margin-top: 10px;
+                }
+
+                .modal-bg .modal-container .modal-box form .topico-add .checkbox-topico {
+                    width: 100%;
+                    height: 50px;
+                }
+
+                    .modal-bg .modal-container .modal-box form .topico-add .checkbox-topico input {
+                        position: relative;
+                        top: 12px;
+                        float: left;
+                        height: 25px;
+                        width: 25px;
+                    }
+
+                    .modal-bg .modal-container .modal-box form .topico-add .checkbox-topico p {
+                        position: relative;
+                        left: 30px;
+                        top: 12px;
+                        width: 140px;
+                        text-align: center;
+                        font-size: 20px;
+                    }
+
+                    .modal-bg .modal-container .modal-box form .topico-add .crear-topico_input {
+                        display: none;
+                    }
+
+                    .modal-bg .modal-container .modal-box form .topico-add .crear-topico_input .niv {
+                        float: left;
+                        width: 20%;
+                    }
+                    
+                    .modal-bg .modal-container .modal-box form .topico-add .crear-topico_input .topic {
+                        width: 80%;
+                        float: left;
+                    }
+
+                    .modal-bg .modal-container .modal-box form .topico-add .crear-topico_input input {
+                        margin-top: 5px;
+                        width: 95%;
+                        height: 30px;
+                        outline: none;
+                    }
+
+                .modal-bg .modal-container .modal-box form .topico-add .select-topico select {
+                    margin-top: 10px;
+                    width: 100%;
+                    height: 30px;
+                    font-size: 20px;
+                }
+
+            .modal-bg .modal-container .modal-box .botones-accion {
+                position: absolute;
+                bottom: 5px;
+                width: 100%;
+            }
+
+                .modal-bg .modal-container .modal-box .botones-accion button {
+                    width: 100px;
+                    height: 30px;
+                }
+
+                    .modal-bg .modal-container .modal-box .botones-accion .btn-agregar {
+                        position: absolute;
+                        right: 0;
+                        background-color: #007bff;
+                        border-color: #007bff;
+                        border-radius: 5px;
+                        border: none;
+                        color: white;
+                        transition: 0.25s;
+                    }
+
+                        .modal-bg .modal-container .modal-box .botones-accion .btn-agregar:hover {
+                            transition: 0.25s;
+                            background-color: #004d9f;
+                            cursor: pointer;
+                        }
+
+                    .modal-bg .modal-container .modal-box .botones-accion .btn-cancelar {
+                        background-color: #ff004c;
+                        border-color: #3295ff;
+                        border-radius: 5px;
+                        border: none;
+                        color: white;
+                    }
+
+                        .modal-bg .modal-container .modal-box .botones-accion .btn-cancelar:hover {
+                            transition: 0.25s;
+                            background-color: #9f0030;
+                            cursor: pointer;
+                        }
+
+.modal-visualizar_bg {
+    background-color: rgba(0, 0, 0, 0.54);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 9200;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s opacity 0.5s;
+}
+
+.bg-active-vis {
+    visibility: visible;
+    opacity: 1;
+}
+                        
+    .modal-visualizar_bg .modal-visualizar_container {
+        background-color: white;
+        border-radius: 10px;
+        position: relative;
+        margin: 0 auto;
+        top: 150px;
+        width: 600px;
+        height: 320px;
+    }
+
+        .modal-visualizar_bg .modal-visualizar_container .modal-visualizar_box {
+            position: relative;
+            margin: 0 auto;
+            top: 10px;
+            width: 95%;
+            height: 95%;
+        }
+
+            .modal-visualizar_bg .modal-visualizar_container .modal-visualizar_box .nombre-actividad {
+                width: 100%;
+                height: 70px;
+            }
+
+                .modal-visualizar_bg .modal-visualizar_container .modal-visualizar_box .nombre-actividad h2 {
+                    text-align: center;
+                    font-size: 50px;
+                    line-height: 70px;
+                }
+
+            .modal-visualizar_bg .modal-visualizar_container .modal-visualizar_box .descripcion-actividad {
+                background-color: rgba(0, 0, 0, 0.212);
+                width: 100%;
+                height: 70px;
+            }
+
+                .modal-visualizar_bg .modal-visualizar_container .modal-visualizar_box .descripcion-actividad p {
+                    position: relative;
+                    top: 10px;
+                    text-align: center;
+                    font-size: 20px;
+                }
+
+            .modal-visualizar_bg .modal-visualizar_container .modal-visualizar_box .topico-nivel {
+                background-color: rgba(0, 0, 0, 0.212);
+                text-align: center;
+                width: 100%;
+                height: 100px;
+                text-transform: uppercase;
+            }
+
+                .modal-visualizar_bg .modal-visualizar_container .modal-visualizar_box .topico-nivel .topico {
+                    font-size: 20px;
+                }
+
+            .modal-visualizar_bg .modal-visualizar_container .modal-visualizar_box .botones {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 50px;
+            }
+
+                .modal-visualizar_bg .modal-visualizar_container .modal-visualizar_box .botones button {
+                    width: 100px;
+                    height: 30px;
+                    position: absolute;
+                    bottom: 5px;
+                    background-color: #ff004c;
+                    border-color: #3295ff;
+                    border-radius: 5px;
+                    border: none;
+                    color: white;
+                    transition: 0.25s;
+                }
+
+                    .modal-visualizar_bg .modal-visualizar_container .modal-visualizar_box .botones button:hover {
+                        transition: 0.25s;
+                        background-color: #9f0030;
+                        cursor: pointer;
+                    }

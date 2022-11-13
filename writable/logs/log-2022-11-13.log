@@ -1,0 +1,332 @@
+CRITICAL - 2022-11-13 15:25:31 --> Undefined variable: tittle
+in APPPATH\Views\Login\index.php on line 7.
+ 1 APPPATH\Views\Login\index.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tittle', 'APPPATH\\Views\\Login\\index.php', 7, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Login\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Login/index', [], true)
+ 5 APPPATH\Controllers\Home.php(9): view('Login/index')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-13 15:26:10 --> Undefined variable: tittle
+in APPPATH\Views\Login\index.php on line 7.
+ 1 APPPATH\Views\Login\index.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tittle', 'APPPATH\\Views\\Login\\index.php', 7, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Login\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Login/index', [], true)
+ 5 APPPATH\Controllers\Home.php(12): view('Login/index')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-13 15:26:12 --> Undefined variable: tittle
+in APPPATH\Views\Login\index.php on line 7.
+ 1 APPPATH\Views\Login\index.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tittle', 'APPPATH\\Views\\Login\\index.php', 7, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Login\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Login/index', [], true)
+ 5 APPPATH\Controllers\Home.php(12): view('Login/index')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-13 15:26:13 --> Undefined variable: tittle
+in APPPATH\Views\Login\index.php on line 7.
+ 1 APPPATH\Views\Login\index.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tittle', 'APPPATH\\Views\\Login\\index.php', 7, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Login\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Login/index', [], true)
+ 5 APPPATH\Controllers\Home.php(12): view('Login/index')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-13 15:26:16 --> Undefined variable: tittle
+in APPPATH\Views\Login\index.php on line 7.
+ 1 APPPATH\Views\Login\index.php(7): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tittle', 'APPPATH\\Views\\Login\\index.php', 7, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\Login\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('Login/index', [], true)
+ 5 APPPATH\Controllers\Home.php(12): view('Login/index')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-13 16:02:18 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\Curriculum.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Curriculum.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Curriculum')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Curriculum')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Curriculum')
+ 5 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Curriculum', true)
+ 6 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-13 16:03:03 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\Curriculum.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Curriculum.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Curriculum')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Curriculum')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Curriculum')
+ 5 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Curriculum', true)
+ 6 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-13 16:03:04 --> syntax error, unexpected '}', expecting ';'
+in APPPATH\Controllers\Curriculum.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Curriculum.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Curriculum')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Curriculum')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Curriculum')
+ 5 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Curriculum', true)
+ 6 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-13 16:28:31 --> Call to a member function login() on null
+in APPPATH\Controllers\Terapeuta.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-13 16:29:14 --> Call to a member function login() on null
+in APPPATH\Controllers\Terapeuta.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-13 16:29:56 --> Call to a member function login() on null
+in APPPATH\Controllers\Terapeuta.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-13 16:30:02 --> Call to a member function login() on null
+in APPPATH\Controllers\Terapeuta.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-13 16:30:09 --> Call to a member function find() on null
+in APPPATH\Controllers\Terapeuta.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Terapeuta->show('login')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-13 16:30:13 --> Call to a member function login() on null
+in APPPATH\Controllers\Terapeuta.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-13 16:31:00 --> Call to a member function login() on null
+in APPPATH\Controllers\Terapeuta.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-13 16:31:26 --> Call to a member function login() on null
+in APPPATH\Controllers\Terapeuta.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-13 16:33:25 --> Call to a member function login() on null
+in APPPATH\Controllers\Terapeuta.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Terapeuta->loginTerapeuta()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-13 16:33:58 --> Call to a member function login() on null
+in APPPATH\Controllers\Terapeuta.php on line 78.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Terapeuta->loginTerapeuta()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-13 16:35:00 --> Call to a member function login() on null
+in APPPATH\Controllers\Terapeuta.php on line 79.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-11-13 16:35:13 --> Call to a member function login() on null
+in APPPATH\Controllers\Terapeuta.php on line 79.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-13 16:35:52 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo failed: Host desconocido.  in C:\laragon\www\denvermx\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\laragon\\www\\...', 171, Array)
+#1 C:\laragon\www\denvermx\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('mysql.hostinger...', 'u534750869_spoo...', 'Jesus876', 'u534750869_denv...', 3306, '', 0)
+#2 C:\laragon\www\denvermx\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\laragon\www\denvermx\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\laragon\www\denvermx\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\laragon\www\denvermx\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\laragon\www\denvermx\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#7 C:\laragon\www\denvermx\app\Models\TerapeutaModel.php(24): CodeIgniter\BaseModel->first()
+#8 C:\laragon\www\denvermx\app\Controllers\Terapeuta.php(79): App\Models\TerapeutaModel->login('joselito@gmail....', 'joselito')
+#9 C:\laragon\www\denvermx\system\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+#10 C:\laragon\www\denvermx\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+#11 C:\laragon\www\denvermx\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\denvermx\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo failed: Host desconocido.  in C:\laragon\www\denvermx\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\laragon\www\denvermx\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('mysql.hostinger...', 'u534750869_spoo...', 'Jesus876', 'u534750869_denv...', 3306, '', 0)
+#1 C:\laragon\www\denvermx\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\denvermx\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\denvermx\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\denvermx\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\denvermx\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\denvermx\app\Models\TerapeutaModel.php(24): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\denvermx\app\Controllers\Terapeuta.php(79): App\Models\TerapeutaModel->login('joselito@gmail....', 'joselito')
+#8 C:\laragon\www\denvermx\system\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+#9 C:\laragon\www\denvermx\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+#10 C:\laragon\www\denvermx\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\denvermx\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo failed: Host desconocido.  in C:\laragon\www\denvermx\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\laragon\www\denvermx\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\denvermx\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\denvermx\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\denvermx\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\denvermx\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\denvermx\app\Models\TerapeutaModel.php(24): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\denvermx\app\Controllers\Terapeuta.php(79): App\Models\TerapeutaModel->login('joselito@gmail....', 'joselito')
+#7 C:\laragon\www\denvermx\system\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+#8 C:\laragon\www\denvermx\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+#9 C:\laragon\www\denvermx\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\denvermx\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-11-13 16:35:52 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo failed: Host desconocido. 
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `terapeutas`
+WHERE `correo` = :correo:
+AND `pass` = :pass:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\TerapeutaModel.php(24): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Terapeuta.php(79): App\Models\TerapeutaModel->login('joselito@gmail.com', 'joselito')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-13 16:38:59 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'u534750869_spoonme'@'189.248.129.211' (using password: YES) in C:\laragon\www\denvermx\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\laragon\www\denvermx\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('194.195.84.103', 'u534750869_spoo...', 'Jesus876', 'u534750869_denv...', 3306, '', 0)
+#1 C:\laragon\www\denvermx\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\denvermx\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\denvermx\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\denvermx\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\denvermx\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\denvermx\app\Models\TerapeutaModel.php(24): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\denvermx\app\Controllers\Terapeuta.php(79): App\Models\TerapeutaModel->login('joselito@gmail....', 'joselito')
+#8 C:\laragon\www\denvermx\system\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+#9 C:\laragon\www\denvermx\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+#10 C:\laragon\www\denvermx\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\denvermx\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'189.248.129.211' (using password: YES) in C:\laragon\www\denvermx\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\laragon\www\denvermx\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\denvermx\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\denvermx\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\denvermx\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\denvermx\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\denvermx\app\Models\TerapeutaModel.php(24): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\denvermx\app\Controllers\Terapeuta.php(79): App\Models\TerapeutaModel->login('joselito@gmail....', 'joselito')
+#7 C:\laragon\www\denvermx\system\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+#8 C:\laragon\www\denvermx\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+#9 C:\laragon\www\denvermx\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\denvermx\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-11-13 16:38:59 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'189.248.129.211' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `terapeutas`
+WHERE `correo` = :correo:
+AND `pass` = :pass:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\TerapeutaModel.php(24): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Terapeuta.php(79): App\Models\TerapeutaModel->login('joselito@gmail.com', 'joselito')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-11-13 16:42:22 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo failed: Host desconocido.  in C:\laragon\www\denvermx\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\laragon\\www\\...', 171, Array)
+#1 C:\laragon\www\denvermx\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('mysql.hostinger...', 'u534750869_spoo...', 'Jesus876', 'u534750869_denv...', 3306, '', 0)
+#2 C:\laragon\www\denvermx\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\laragon\www\denvermx\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\laragon\www\denvermx\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\laragon\www\denvermx\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\laragon\www\denvermx\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#7 C:\laragon\www\denvermx\app\Models\TerapeutaModel.php(24): CodeIgniter\BaseModel->first()
+#8 C:\laragon\www\denvermx\app\Controllers\Terapeuta.php(79): App\Models\TerapeutaModel->login('joselito@gmail....', 'joselito')
+#9 C:\laragon\www\denvermx\system\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+#10 C:\laragon\www\denvermx\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+#11 C:\laragon\www\denvermx\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\denvermx\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo failed: Host desconocido.  in C:\laragon\www\denvermx\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\laragon\www\denvermx\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('mysql.hostinger...', 'u534750869_spoo...', 'Jesus876', 'u534750869_denv...', 3306, '', 0)
+#1 C:\laragon\www\denvermx\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\denvermx\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\denvermx\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\denvermx\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\denvermx\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 C:\laragon\www\denvermx\app\Models\TerapeutaModel.php(24): CodeIgniter\BaseModel->first()
+#7 C:\laragon\www\denvermx\app\Controllers\Terapeuta.php(79): App\Models\TerapeutaModel->login('joselito@gmail....', 'joselito')
+#8 C:\laragon\www\denvermx\system\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+#9 C:\laragon\www\denvermx\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+#10 C:\laragon\www\denvermx\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\denvermx\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo failed: Host desconocido.  in C:\laragon\www\denvermx\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\laragon\www\denvermx\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\denvermx\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\denvermx\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\denvermx\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\denvermx\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#5 C:\laragon\www\denvermx\app\Models\TerapeutaModel.php(24): CodeIgniter\BaseModel->first()
+#6 C:\laragon\www\denvermx\app\Controllers\Terapeuta.php(79): App\Models\TerapeutaModel->login('joselito@gmail....', 'joselito')
+#7 C:\laragon\www\denvermx\system\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+#8 C:\laragon\www\denvermx\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+#9 C:\laragon\www\denvermx\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\denvermx\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-11-13 16:42:22 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo failed: Host desconocido. 
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `terapeutas`
+WHERE `correo` = :correo:
+AND `pass` = :pass:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\TerapeutaModel.php(24): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Terapeuta.php(79): App\Models\TerapeutaModel->login('joselito@gmail.com', 'joselito')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Terapeuta->login()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Terapeuta))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
