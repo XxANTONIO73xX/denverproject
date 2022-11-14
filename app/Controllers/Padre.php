@@ -117,7 +117,7 @@ class Padre extends ResourceController{
                 "user" => $padre
             ]);
         }else{
-            return $this->respond(["Error" => "Usuario y contrasña incorrectos"]);
+            return $this->respond(["error" => "Usuario y contrasña incorrectos"]);
         }
     }
 
