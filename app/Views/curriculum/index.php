@@ -34,17 +34,14 @@
                             </div>
                         </div>
                         <div id="selectTopico" class="select-topico">
-                            <select name="" id="select_topico">
-                                <option value="topico1">Tópico I</option>
-                                <option value="topico1">Tópico II</option>
-                                <option value="topico3">Tópico III</option>
+                            <select name="idTopico" id="select_topico">
                             </select>
                         </div>
                     </div>
                 </form>
                 <div class="botones-accion">
                     <button onclick="cerrarModalEditar()" class="btn-cancelar">Cancelar</button>
-                    <button class="btn-agregar" onclick="quedoAgregado()">Agregar</button>
+                    <button class="btn-agregar" onclick="agregar(0)">Agregar</button>
                 </div>
             </div>
         </div>

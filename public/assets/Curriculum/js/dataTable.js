@@ -137,5 +137,14 @@ $(document).ready( function () {
         }); 
     });
 });
+$.ajax({
+    type: "GET",
+    url: "https://denvermx.online/public/topico",
+    dataType: "json"
+}).done(function(data){
+    data.topicos.forEach(topico => {
+        $("#select_topico").append(`<option value="${topico.id}">${topico.nombre} Nivel: ${topico.nivel}</option>`)
+    });
+});
 
 
