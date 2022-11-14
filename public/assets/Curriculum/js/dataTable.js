@@ -101,6 +101,16 @@ $(document).ready( function () {
     $('#table tbody').on('click', "button[name='ver']", function(){
         var modalBg = document.querySelector('.modal-visualizar_bg');
         modalBg.classList.add('bg-active-vis');
+
+        $.ajax({
+            url: 'https://denvermx.online/public/actividad/' + id,
+            type: "GET",
+            dataType: "json"
+        })
+        .done(function(data, res) {
+            console.log("estoy jalando al 100%")
+        }); 
+}
     });
 } );
 
