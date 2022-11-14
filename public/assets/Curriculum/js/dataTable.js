@@ -102,15 +102,21 @@ $(document).ready( function () {
     $('#table tbody').on('click', "button[name='ver']", function(){
         var modalBg = document.querySelector('.modal-visualizar_bg');
         modalBg.classList.add('bg-active-vis');
+        var data = table.row($(this).parents('tr')).data();
     
         $.ajax({
-            url: 'https://denvermx.online/public/actividad/' + id,
+            url: 'https://denvermx.online/public/actividad/' + data.id,
+            data:{},
             type: "GET",
             dataType: "json"
         })
         .done(function(data, res) {
-            console.log("estoy jalando al 100%")
-            $(".class h2").val(data.actividades.nombre)
+            
+            console.log("estoy jalando al 100%");
+            $(".nombre-actividad h2").val(data.actividades.nombre);
+            $(".descripcion-actividad p").val(data.actividades.descripcion);
+            $(".topico-nivel .topico h2").val(data.actividades.topico.nombre);
+            $(".topico-nivel .nivel h2").val(data.actividades.topico.nivel);
         }); 
     });
 });
