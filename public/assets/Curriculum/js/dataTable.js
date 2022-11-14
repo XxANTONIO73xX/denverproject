@@ -112,11 +112,28 @@ $(document).ready( function () {
         })
         .done(function(data, res) {
             
-            console.log("estoy jalando al 100%");
-            $(".nombre-actividad h2").val(data.actividades.nombre);
-            $(".descripcion-actividad p").val(data.actividades.descripcion);
-            $(".topico-nivel .topico h2").val(data.actividades.topico.nombre);
-            $(".topico-nivel .nivel h2").val(data.actividades.topico.nivel);
+            modalBg.innerHTML = `
+            <div class="modal-visualizar_container">
+            <div class="modal-visualizar_box">
+                <div class="nombre-actividad">
+                    <h2>${data.actividades.nombre}</h2>
+                </div>
+                <div class="descripcion-actividad">
+                    <p>${data.actividades.descripcion}</p>
+                </div>
+                <div class="topico-nivel">
+                    <div class="topico">
+                        <h2>${data.actividades.topico.nombre}</h2>
+                    </div>
+                    <div class="nivel">
+                        <h2>Nivel ${data.actividades.topico.nivel}</h2>
+                    </div>
+                </div>
+                <div class="botones">
+                    <button onclick="cerrarModalVisualizar()" class="btn-cancelar">Cancelar</button>
+                </div>
+            </div>
+        </div>`;
         }); 
     });
 });

@@ -51,27 +51,7 @@
     </div>
     <!--------------------------------------------------MODAL PARA VISUALIZAR-------------------------------------------------->
     <div class="modal-visualizar_bg">
-        <div class="modal-visualizar_container">
-            <div class="modal-visualizar_box">
-                <div class="nombre-actividad">
-                    <h2>Actividad 1</h2>
-                </div>
-                <div class="descripcion-actividad">
-                    <p>Puede ser en respuesta a una pista del adulto para empezar pero apilar 3 ó más bloques independientemente. </p>
-                </div>
-                <div class="topico-nivel">
-                    <div class="topico">
-                        <h2>Habilidades Sociales</h2>
-                    </div>
-                    <div class="nivel">
-                        <h2>Nivel 4</h2>
-                    </div>
-                </div>
-                <div class="botones">
-                    <button onclick="cerrarModalVisualizar()" class="btn-cancelar">Cancelar</button>
-                </div>
-            </div>
-        </div>
+        
     </div>
     <!--------------------------------------------------MODAL PARA ELIMINAR-------------------------------------------------->
     <main>
