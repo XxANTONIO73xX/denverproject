@@ -1,5 +1,5 @@
 if(sessionStorage.getItem('usuario') !== null){
-    location.href = 'https://denvermx.online/public/curriculum';
+    location.href = 'https://denvermx.online/public/curricu';
 }
 
 $("#login").click(function () { 
