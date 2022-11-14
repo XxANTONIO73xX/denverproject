@@ -14,7 +14,11 @@ $("#login").click(function () {
         },
         dataType: "json",
     }).done(function(data){
-        sessionStorage.setItem("usuario", data.user)
-        location.href = "https://denvermx.online/public/curriculum"
+        if(data.hasOwnProperty('error')){
+            alert(data.error)
+        }else{
+            sessionStorage.setItem("usuario", data.user)
+            location.href = "https://denvermx.online/public/curriculum"
+        }
     });
 });

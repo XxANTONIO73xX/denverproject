@@ -9,7 +9,7 @@ class Curriculum extends BaseController
         $data = [
             "tittle" => "Terapeuta || Curriculum || Denver"
         ];
-        return view('template/header', $data);
-        //.view('Curriculum/index');
+        return view('template/header', $data)
+        .view('curriculum/index');
     }
 }

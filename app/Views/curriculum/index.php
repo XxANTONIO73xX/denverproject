@@ -1,4 +1,4 @@
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="<?php base_url() ?>assets/Curriculum/css/styles.css">
     <script src="https://kit.fontawesome.com/7a089fb5de.js" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="sweetalert2.all.min.js"></script>
@@ -104,8 +104,7 @@
         </div>
     </main>
     
-    <script src="assets/js/dataTable.js"></script>
-    <script src="/generalAssest/js/verify.js"></script>
-    <script src="./assets/js/botones.js"></script>
+    <script src="<?php base_url() ?>assets/Curriculum/js/dataTable.js"></script>
+    <script src="<?php base_url() ?>assets/Curriculum/js/botones.js"></script>
 </body>
 </html>

@@ -80,7 +80,7 @@ class Terapeuta extends ResourceController{
                 "user" => $terapeuta
             ]);
         }else{
-            return $this->respond(["Error" => "Usuario y contrasña incorrectos"]);
+            return $this->respond(["error" => "Usuario y contrasña incorrectos"]);
         }
     }
 
