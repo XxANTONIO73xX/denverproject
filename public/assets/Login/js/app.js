@@ -1,5 +1,5 @@
 if(sessionStorage.getItem('usuario') !== null){
-    location.href = 'http://denvermx.loc/';
+    location.href = 'https://denvermx.online/public/curriculum';
 }
 
 $("#login").click(function () { 
@@ -15,6 +15,6 @@ $("#login").click(function () {
         dataType: "json",
     }).done(function(data){
         sessionStorage.setItem("usuario", data.user)
-        location.href = "/denver"
+        location.href = "https://denvermx.online/public/curriculum"
     });
 });

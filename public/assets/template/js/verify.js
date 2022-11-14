@@ -1,8 +1,8 @@
 if(sessionStorage.getItem('usuario') === null){
-    location.href = 'http://denvermx.loc/';
+    location.href = 'https://denvermx.online/public/';
 }
 
 $("#cerrarSesion").click(function (e) { 
     sessionStorage.removeItem('usuario')
-    location.href = 'http://denvermx.loc/';
+    location.href = 'https://denvermx.online/public/';
 });
