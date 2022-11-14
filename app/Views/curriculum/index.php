@@ -1,7 +1,6 @@
     <link rel="stylesheet" href="<?php base_url() ?>assets/Curriculum/css/styles.css">
     <script src="https://kit.fontawesome.com/7a089fb5de.js" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="sweetalert2.all.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
     <!--------------------------------------------------MODAL PARA AGREGAR-------------------------------------------------->
@@ -75,7 +74,6 @@
         </div>
     </div>
     <!--------------------------------------------------MODAL PARA ELIMINAR-------------------------------------------------->
-    <script src="../generalAssest/js/cargarHeader.js"></script>
     <main>
         <div class="conteiner-main">
             <div class="title">

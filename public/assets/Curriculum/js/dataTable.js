@@ -57,7 +57,7 @@ $(document).ready( function () {
             {"data": 'descripcion'},
             {"data": 'topico.nombre'},
             {"data": 'topico.nivel'},
-            {"targets": -1, "data":null, "defaultContent":'<button onclick="abrirModalEditar()" id="editar" name="editar"><i class="fa-solid fa-pen-to-square"></i></button> <button id="eliminar" name="eliminar"><i class="fa-solid fa-trash"></i></i></button> <button onclick="abrirModalVisualizar()" id="ver"><i class="fa-solid fa-eye"></i></button>'},
+            {"targets": -1, "data":null, "defaultContent":'<button onclick="abrirModalEditar()" id="editar" name="editar"><i class="fa-solid fa-pen-to-square"></i></button> <button id="eliminar" name="eliminar"><i class="fa-solid fa-trash"></i></i></button> <button id="ver" name="ver"><i class="fa-solid fa-eye"></i></button>'},
         ]
     });
     $('#table tbody').on('click', "button[name='eliminar']", function(){
@@ -98,9 +98,10 @@ $(document).ready( function () {
             }
         });
     });
-    var data = table.row($(this).parents('tr')).data();
-      $("#idActividad").val(data.id)
-      var id = $("#idActividad").val();
+    $('#table tbody').on('click', "button[name='ver']", function(){
+        var modalBg = document.querySelector('.modal-visualizar_bg');
+        modalBg.classList.add('bg-active-vis');
+    });
 } );
 
 
