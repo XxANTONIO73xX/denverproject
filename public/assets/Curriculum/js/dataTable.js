@@ -98,10 +98,11 @@ $(document).ready( function () {
             }
         });
     });
+
     $('#table tbody').on('click', "button[name='ver']", function(){
         var modalBg = document.querySelector('.modal-visualizar_bg');
         modalBg.classList.add('bg-active-vis');
-
+    
         $.ajax({
             url: 'https://denvermx.online/public/actividad/' + id,
             type: "GET",
@@ -109,9 +110,9 @@ $(document).ready( function () {
         })
         .done(function(data, res) {
             console.log("estoy jalando al 100%")
+            $(".class h2").val(data.actividades.nombre)
         }); 
-}
     });
-} );
+});
 
 
