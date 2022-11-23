@@ -37,6 +37,8 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/curriculum', 'Curriculum::index');
+$routes->get('/padres', 'Padres::index');
+$routes->get('/infantes', 'Infantes::index');
 $routes->resource('terapeuta');
 $routes->post('terapeuta/update/(:segment)', 'Terapeuta::update/$1');
 $routes->post('terapeuta/login', 'Terapeuta::login');
