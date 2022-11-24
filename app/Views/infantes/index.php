@@ -8,34 +8,26 @@
         <div class="modal-container">
             <div class="modal-box">
                 <form>
-                    <div class="datos-actividad">
-                        <div class="agregar-name_actividad">
+                <div class="datos-infante">
+                        <div class="agregar-name_infante">
                             <p>Nombre de Actividad:</p>
                             <input type="text" name="" id="nombre">
                         </div>
-                        <div class="agregar-descripcion_actividad">
+                        <div class="agregar-apellidos_infante">
                             <p>Descripción:</p>
-                            <input type="text" name="" id="descripcion">
+                            <input type="text" name="" id="apellidos">
                         </div>
-                    </div>
-                    <div class="topico-add">
-                        <div class="checkbox-topico">
-                            <input type="checkbox" id="check" value="1" onchange="showContent()"/> 
-                            <p>Crear tópico</p>
+                        <div class="agregar-edad_infante">
+                            <p>Edad:</p>
+                            <input type="text" name="" id="edad">
                         </div>
-                        <div id="createTopico" class="crear-topico_input">
-                            <div class="topic">
-                                <p>Nombre de tópico</p>
-                                <input type="text" id="nombreTopico">
-                            </div>
-                            <div class="niv">
-                                <p>Nivel</p>
-                                <input type="text" id="nivel">
-                            </div>
+                        <div class="agregar-curp_infante">
+                            <p>CURP:</p>
+                            <input type="text" name="" id="curp">
                         </div>
-                        <div id="selectTopico" class="select-topico">
-                            <select name="idTopico" id="select_topico">
-                            </select>
+                        <div class="agregar-diagnostico_infante">
+                            <p>Diagnostico:</p>
+                            <input type="text" name="" id="diagnostico">
                         </div>
                     </div>
                 </form>

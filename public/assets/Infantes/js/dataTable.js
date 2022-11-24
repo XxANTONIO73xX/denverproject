@@ -80,7 +80,7 @@ $(document).ready( function () {
                     dataType: "json",
                 })
                     .done(function (data, res) {
-                        console.log("La actividad ha sido eliminada con exito");
+                        console.log("El infante ha sido eliminado con exito");
                     
                         Swal.fire(
                             '¡Borrado!',
@@ -94,7 +94,7 @@ $(document).ready( function () {
                     
                     })
                     .fail(function () {
-                        console.log("Error", "Ocurrio un problema al eliminar la actividad")
+                        console.log("Error", "Ocurrio un problema al eliminar el infante")
                     })
             }
         });
@@ -106,7 +106,7 @@ $(document).ready( function () {
         var data = table.row($(this).parents('tr')).data();
     
         $.ajax({
-            url: 'https://denvermx.online/public/padre/' + data.id,
+            url: 'https://denvermx.online/public/infante/' + data.id,
             data:{},
             type: "GET",
             dataType: "json"
@@ -116,36 +116,26 @@ $(document).ready( function () {
             modalBg.innerHTML = `
             <div class="modal-visualizar_container">
             <div class="modal-visualizar_box">
-                <div class="nombre-actividad">
-                    <h2>${data.actividades.nombre}</h2>
+                <div class="nombre-infante">
+                    <h3>${data.infante.nombre}</h3>
                 </div>
-                <div class="descripcion-actividad">
-                    <p>${data.actividades.descripcion}</p>
+                <div class="apellidos-infante">
+                    <h3>${data.infante.apellidos}</h3>
                 </div>
-                <div class="topico-nivel">
-                    <div class="topico">
-                        <h2>${data.actividades.topico.nombre}</h2>
-                    </div>
-                    <div class="nivel">
-                        <h2>Nivel ${data.actividades.topico.nivel}</h2>
-                    </div>
+                <div class="edad-infante">
+                    <p>${data.infante.edad}</p>
                 </div>
-                <div class="botones">
-                    <button onclick="cerrarModalVisualizar()" class="btn-cancelar">Cancelar</button>
+                <div class="curp-infante">
+                    <p>${data.infante.curp}</p>
+                </div>
+                <div class="diagnostico-infante">
+                    <p>${data.infante.diagnostico}</p>
                 </div>
             </div>
         </div>`;
         }); 
     });
 });
-$.ajax({
-    type: "GET",
-    url: "https://denvermx.online/public/topico",
-    dataType: "json"
-}).done(function(data){
-    data.topicos.forEach(topico => {
-        $("#select_topico").append(`<option value="${topico.id}">${topico.nombre} Nivel: ${topico.nivel}</option>`)
-    });
-});
+
 
 
