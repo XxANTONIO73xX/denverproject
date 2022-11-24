@@ -7,12 +7,16 @@ function agregar(id) {
             //patente pendiente malvados y asociados
         }else{
             $.ajax({
-                url: 'https://denvermx.online/public/actividades/insertar',
+                url: 'https://denvermx.online/public/padre',
                 type: 'POST',
                 data: {
                     "nombre": $("#nombre").val(),
-                    "descripcion": $("#descripcion").val(),
-                    "idTopico": $("#select_topico").val()
+                    "apellido": $("#apellido").val(),
+                    "direccion": $("#direccion").val(),
+                    "telefono": $("#telefono").val(),
+                    "correo": $("#correo").val(),
+                    "pass": $("#pass").val(),
+                    "idInfante": $("#select_infante").val()
                 },
                 dataType: "json",
             })

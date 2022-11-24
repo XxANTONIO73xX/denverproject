@@ -9,32 +9,32 @@
             <div class="modal-box">
                 <form>
                     <div class="datos-actividad">
-                        <div class="agregar-name_actividad">
-                            <p>Nombre de Actividad:</p>
+                        <div class="agregar-name_padre">
+                            <p>Nombre:</p>
                             <input type="text" name="" id="nombre">
                         </div>
+                        <div class="agregar-apellido_padre">
+                            <p>Apellido:</p>
+                            <input type="text" name="" id="apellido">
+                        </div>
+                        <div class="agregar-direccion_padre">
+                            <p>Direccion:</p>
+                            <input type="text" name="" id="direccion">
+                        </div>
+                        <div class="agregar-telefono_padre">
+                            <p>Telefono:</p>
+                            <input type="text" name="" id="telefono">
+                        </div>
+                        <div class="agregar-correo_padre">
+                            <p>Correo Electronico:</p>
+                            <input type="email" name="" id="correo">
+                        </div>
                         <div class="agregar-descripcion_actividad">
-                            <p>Descripción:</p>
-                            <input type="text" name="" id="descripcion">
+                            <p>Password:</p>
+                            <input type="text" name="" id="pass">
                         </div>
-                    </div>
-                    <div class="topico-add">
-                        <div class="checkbox-topico">
-                            <input type="checkbox" id="check" value="1" onchange="showContent()"/> 
-                            <p>Crear tópico</p>
-                        </div>
-                        <div id="createTopico" class="crear-topico_input">
-                            <div class="topic">
-                                <p>Nombre de tópico</p>
-                                <input type="text" id="nombreTopico">
-                            </div>
-                            <div class="niv">
-                                <p>Nivel</p>
-                                <input type="text" id="nivel">
-                            </div>
-                        </div>
-                        <div id="selectTopico" class="select-topico">
-                            <select name="idTopico" id="select_topico">
+                        <div id="selectInfante" class="select-infante">
+                            <select name="idInfante" id="select_infante">
                             </select>
                         </div>
                     </div>

@@ -82,7 +82,7 @@ $(document).ready( function () {
                     dataType: "json",
                 })
                     .done(function (data, res) {
-                        console.log("La actividad ha sido eliminada con exito");
+                        console.log("El padre ha sido eliminado con exito");
                     
                         Swal.fire(
                             '¡Borrado!',
@@ -96,7 +96,7 @@ $(document).ready( function () {
                     
                     })
                     .fail(function () {
-                        console.log("Error", "Ocurrio un problema al eliminar la actividad")
+                        console.log("Error", "Ocurrio un problema al eliminar el padre")
                     })
             }
         });
@@ -118,18 +118,24 @@ $(document).ready( function () {
             modalBg.innerHTML = `
             <div class="modal-visualizar_container">
             <div class="modal-visualizar_box">
-                <div class="nombre-actividad">
-                    <h2>${data.actividades.nombre}</h2>
+                <div class="nombre-padre">
+                    <h2>${data.padre.nombre}</h2>
                 </div>
-                <div class="descripcion-actividad">
-                    <p>${data.actividades.descripcion}</p>
+                <div class="apellido-padre">
+                    <p>${data.padre.apellido}</p>
                 </div>
-                <div class="topico-nivel">
-                    <div class="topico">
-                        <h2>${data.actividades.topico.nombre}</h2>
-                    </div>
-                    <div class="nivel">
-                        <h2>Nivel ${data.actividades.topico.nivel}</h2>
+                <div class="direccion-padre">
+                    <p>${data.padre.direccion}</p>
+                </div>
+                <div class="telefono-padre">
+                    <p>${data.padre.telefono}</p>
+                </div>
+                <div class="correo-padre">
+                    <p>${data.padre.correo}</p>
+                </div>
+                <div class="infante-padre">
+                    <div class="infante">
+                        <h3>${data.infante.nombre}</h3>
                     </div>
                 </div>
                 <div class="botones">
@@ -142,11 +148,11 @@ $(document).ready( function () {
 });
 $.ajax({
     type: "GET",
-    url: "https://denvermx.online/public/topico",
+    url: "https://denvermx.online/public/infante",
     dataType: "json"
 }).done(function(data){
-    data.topicos.forEach(topico => {
-        $("#select_topico").append(`<option value="${topico.id}">${topico.nombre} Nivel: ${topico.nivel}</option>`)
+    data.infantes.forEach(infante => {
+        $("#select_topico").append(`<option value="${infante.id}">${infante.nombre} Appellido: ${infante.apellido}</option>`)
     });
 });
 
