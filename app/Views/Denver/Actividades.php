@@ -48,9 +48,9 @@
                             </div>
                             <div class="activities-descripcion">
                                 <p>Demuestra consciencia del sonido girando los ojos y la cabeza.</p>
-                                <button id="responder-button" onclick="mostrarResponder()">Responder</button>
+                                <button id="responder-button" onclick="mostrarResponder(1)">Responder</button>
                             </div>
-                            <div id="act-respuestas" class="activities-respuesta">
+                            <div id="act-respuestas-1" class="activities-respuesta">
                                 <div class="select-nino">
                                     <select name="" id="select-desempeno">
                                         <option value="">Lo hace solo</option>
@@ -61,12 +61,14 @@
                                 <div class="subir-archivos">
                                     <div class="file-upload">     
                                         <div class="image-upload-wrap">
-                                            <input class="file-upload-input" type='file'>
+                                            <input id="input-file" class="file-upload-input" type='file'>
                                             <div class="drag-text">
                                                 <h3>Suelta el archivo aquí</h3>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                                <div class="archivos" id="archivos">
                                 </div>
                             </div>
                         </div>
