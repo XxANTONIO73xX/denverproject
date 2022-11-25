@@ -263,10 +263,11 @@ main .activities-container {
                 bottom: 20px;
             }
 
-        main .activities-container .activities-box .activities-respuesta  .subir-archivos {
+        main .activities-container .activities-box .activities-respuesta .archivos {
             position: absolute;
             bottom: 0;
             margin-bottom: 5px;
+            margin-left: 10px;
         }
 
         .file-upload {

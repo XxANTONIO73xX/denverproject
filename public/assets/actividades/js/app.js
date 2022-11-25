@@ -64,25 +64,33 @@ function cargarActividades(idTopico){
                 <button id="responder-button" onclick="mostrarResponder(${actividad.id})">Responder</button>
             </div>
             <div id="act-respuestas-${actividad.id}" class="activities-respuesta">
-                <div class="select-nino">
-                    <select name="" id="select-desempeno">
-                        <option value="">Lo hace solo</option>
-                        <option value="">Lo hace con ayuda</option>
-                        <option value="">No lo hace</option>
-                    </select>
-                </div>
-                <div class="subir-archivos">
-                    <div class="file-upload">     
-                        <div class="image-upload-wrap">
-                            <input class="file-upload-input" type='file'>
-                            <div class="drag-text">
-                                <h3>Suelta el archivo aquí</h3>
+                <form id="formulario-${actividad.id}" method="POST" enctype="multipart/form-data">
+                    <div class="select-nino">
+                        <select name="respuestaUsuario" id="select-desempeno-${actividad.id}">
+                            <option value="Lo hace solo">Lo hace solo</option>
+                            <option value="Lo hace con ayuda">Lo hace con ayuda</option>
+                            <option value="No lo hace">No lo hace</option>
+                        </select>
+                    </div>
+                    <div class="subir-archivos">
+                        <div class="file-upload">     
+                            <div class="image-upload-wrap">
+                                <input name="evidencia" id="${actividad.id}" class="file-upload-input" type='file'>
+                                <div class="drag-text">
+                                    <h3>Suelta el archivo aquí</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="archivos" id="archivos">
-                </div>
+                    <div class="archivos" id="archivos-${actividad.id}">
+                    </div>
+                    <div class="values">
+                        <input name="idPadre" type="hidden" value="${sessionStorage.getItem("id")}">
+                        <input name="idTopico" type="hidden" value="${data.topico.id}">
+                        <input name="idActividad" type="hidden" value="${actividad.id}">
+                    </div>                  
+                </form>
+                <button id="${actividad.id}" class="enviar">Enviar</button>
             </div>
         </div>`
         })
@@ -95,24 +103,43 @@ function mostrarResponder(id) {
 }
 
 
-const input = document.querySelector("#input-file");
-let files;
-var fileCurrent;
-
-input.addEventListener('change', (e) => {
+$(document).on('change','.file-upload-input', function(e){ //esta función se ejecutará en todos los casos
+    let files;
     e.preventDefault();
     files = e.target.files;
-    res = showFiles(files);
+    idArchivos = "archivos-"+e.target.id;
+    res = showFiles(files,idArchivos);
     if(res == false){
     input.value = null;
     }
 });
 
-function showFiles(files){
+$(document).on('click', '.enviar', function(e){
+    formId = "formulario-"+e.target.id
+    formulario = new FormData(document.getElementById(formId))
+    $.ajax({
+        url: 'https://denvermx.online/public/respuesta',
+        type: 'POST',
+        data: formulario,
+        cache: false,
+        contentType: false,
+        processData: false,
+        dataType: "json",
+    })
+        .done(function (data, res) {
+            if(data.hasOwnProperty('error')){
+                alert("Ha ocurrido un error")
+            }else{
+                alert("Envio exitoso!")
+            }
+        })
+});
+
+function showFiles(files,idArchivos){
     if(files.length === 1){
         console.log(files);
         console.log("Si es una imagen");
-        res = processFile(files[0]);
+        res = processFile(files[0],idArchivos);
         return res;
     }else{
         alert("No puedes enviar mas de una imagen");
@@ -120,7 +147,7 @@ function showFiles(files){
     }
 }
 
-function processFile(file){
+function processFile(file,idArchivos){
     const docType = file.type;
     console.log(file.type);
     const validExtension = ['image/jpeg', 'image/jpg', 'image/png', 'video/mp4' ];
@@ -129,7 +156,7 @@ function processFile(file){
         const fileReader = new FileReader();
         fileReader.addEventListener('load', (e) =>{
             const fileUrl = fileReader.result;
-            const enlace = document.getElementById("archivos");
+            const enlace = document.getElementById(idArchivos);
             enlace.innerHTML = `<a href="${fileUrl}" download id="evidencia">Descarga tu evidencia aqui</a>`;
         });
 

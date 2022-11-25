@@ -28,13 +28,13 @@ class Respuesta extends ResourceController{
         $file = $this->request->getFile('evidencia');
         if(! $file->isValid())
             return $this->fail($file->getErrorString());
-        $file->move('/public/uploads/respuestas');
+        $file->move('./uploads/ejemplos');
         $data=[
             "idPadre" => $this->request->getPost("idPadre"),
             "idActividad" => $this->request->getPost("idActividad"),
             "idTopico" => $this->request->getPost("idTopico"),
             "respuestaUsuario" => $this->request->getPost("respuestaUsuario"),
-            "evidencia" => "https://denvermx.online/public/uploads/respuestas/".$file->getName()
+            "evidencia" => "https://denvermx.online/public/uploads/ejemplos/".$file->getName()
         ];
 
         $id = $this->model->insert($data);
@@ -62,8 +62,8 @@ class Respuesta extends ResourceController{
             $file = $this->request->getFile('evidencia');
             if(! $file->isValid())
             return $this->fail($file->getErrorString());
-            $file->move('/public/uploads/respuestas');
-            $data["evidencia"] = "https://denvermx.online/public/uploads/respuestas/".$file->getName();
+            $file->move('./uploads/ejemplos');
+            $data["evidencia"] = "https://denvermx.online/public/uploads/ejemplos/".$file->getName();
         }
         $result = $this->model->update($id, $data);
 

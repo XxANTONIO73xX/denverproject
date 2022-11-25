@@ -18,6 +18,7 @@ $("#login").click(function () {
             alert(data.error)
         }else{
             sessionStorage.setItem("usuario", data.user)
+            sessionStorage.setItem("id",data.user.id)
             location.href = "https://denvermx.online/public/denver/actividades"
         }
     });

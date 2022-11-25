@@ -51,25 +51,32 @@
                                 <button id="responder-button" onclick="mostrarResponder(1)">Responder</button>
                             </div>
                             <div id="act-respuestas-1" class="activities-respuesta">
-                                <div class="select-nino">
-                                    <select name="" id="select-desempeno">
-                                        <option value="">Lo hace solo</option>
-                                        <option value="">Lo hace con ayuda</option>
-                                        <option value="">No lo hace</option>
-                                    </select>
-                                </div>
-                                <div class="subir-archivos">
-                                    <div class="file-upload">     
-                                        <div class="image-upload-wrap">
-                                            <input id="input-file" class="file-upload-input" type='file'>
-                                            <div class="drag-text">
-                                                <h3>Suelta el archivo aquí</h3>
+                                <form id="formulario" method="POST" enctype="multipart/form-data">
+                                    <div class="select-nino">
+                                        <select id="select-desempeno">
+                                            <option value="Lo hace solo">Lo hace solo</option>
+                                            <option value="Lo hace con ayuda">Lo hace con ayuda</option>
+                                            <option value="No lo hace">No lo hace</option>
+                                        </select>
+                                    </div>
+                                    <div class="subir-archivos">
+                                        <div class="file-upload">     
+                                            <div class="image-upload-wrap">
+                                                <input id="input-file" class="file-upload-input" type='file'>
+                                                <div class="drag-text">
+                                                    <h3>Suelta el archivo aquí</h3>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="archivos" id="archivos">
-                                </div>
+                                    <div class="archivos" id="archivos">
+                                    </div>
+                                    <div class="values">
+                                        <input id="idTopico" type="hidden" value="">
+                                        <input id="idActividad" type="hidden" value="">
+                                    </div>
+                                </form>
+                                <button id="enviar" class="enviar">Enviar</button>
                             </div>
                         </div>
                     </div>
