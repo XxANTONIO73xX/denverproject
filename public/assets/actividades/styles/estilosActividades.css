@@ -245,22 +245,28 @@ main .activities-container {
             top: 15px;
         }
 
-        main .activities-container .activities-box .activities-respuesta .select-nino {
-            position: absolute;
-            width: 100%;
-            left: 25px;
-            bottom: 100px;
-        }
-
-            main .activities-container .activities-box .activities-respuesta .select-nino select {
-                width: 95%;
+            main .activities-container .activities-box .activities-respuesta .select-nino {
+                position: absolute;
+                width: 100%;
+                left: 25px;
+                bottom: 100px;
             }
 
-        main .activities-container .activities-box .activities-respuesta .subir-archivos {
+                main .activities-container .activities-box .activities-respuesta .select-nino select {
+                    width: 95%;
+                }
+
+            main .activities-container .activities-box .activities-respuesta .subir-archivos {
+                position: absolute;
+                width: 100%;
+                height: 60px;
+                bottom: 20px;
+            }
+
+        main .activities-container .activities-box .activities-respuesta  .subir-archivos {
             position: absolute;
-            width: 100%;
-            height: 60px;
-            bottom: 20px;
+            bottom: 0;
+            margin-bottom: 5px;
         }
 
         .file-upload {
