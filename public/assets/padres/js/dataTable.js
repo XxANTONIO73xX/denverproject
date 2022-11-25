@@ -152,7 +152,7 @@ $.ajax({
     dataType: "json"
 }).done(function(data){
     data.infantes.forEach(infante => {
-        $("#select_topico").append(`<option value="${infante.id}">${infante.nombre} Appellido: ${infante.apellido}</option>`)
+        $("#select_infante").append(`<option value="${infante.id}">${infante.nombre} Appellido: ${infante.apellido}</option>`)
     });
 });
 
