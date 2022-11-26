@@ -39,6 +39,40 @@ function agregar(id) {
                 }
             })
     } else {
-
+        $.ajax({
+            url: 'https://denvermx.online/public/padre/update/' + id,
+            type: 'POST',
+            data: {
+                "nombre": $("#nombre").val(),
+                "apellido": $("#apellido").val(),
+                "direccion": $("#direccion").val(),
+                "telefono": $("#telefono").val(),
+                "correo": $("#correo").val(),
+                "pass": $("#pass").val(),
+                "idInfante": $("#select_infante").val()
+            },
+            dataType: "json",
+        })
+            .done(function (data, res) {
+                if (data.hasOwnProperty('error')) {
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'error',
+                        title: 'Ha ocurrido un error',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                } else {
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Se ha editado correctamente',
+                        showConfirmButton: false,
+                        timer: 1500
+                    }).then(function () {
+                        window.location.reload()
+                    });
+                }
+            })
     }
 }

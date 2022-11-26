@@ -136,6 +136,24 @@ $(document).ready( function () {
         </div>`;
         }); 
     });
+
+    $('#table tbody').on('click', "button[name='editar']", function(){
+        var dataTable = table.row($(this).parents('tr')).data();
+        $.ajax({
+            url: 'https://denvermx.online/public/actividad/' + dataTable.id,
+            data:{},
+            type: "GET",
+            dataType: "json"
+        }).done(function(data){
+            $("#nombre").val(data.actividades.nombre)
+            $("#descripcion").val(data.actividades.descripcion)
+            $("#select_topico").val(data.actividades.topico.id)
+            $("#nombreTopico").val(data.actividades.topico.nombre)
+            $("#nivel").val(data.actividades.topico.nivel)
+        })
+        $(".btn-agregar").attr("onclick", "agregar("+dataTable.id+")")
+    })
+
 });
 $.ajax({
     type: "GET",
