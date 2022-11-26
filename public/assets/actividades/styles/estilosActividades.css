@@ -270,6 +270,14 @@ main .activities-container {
             margin-left: 10px;
         }
 
+        main .activities-container .activities-box .activities-respuesta .enviar {
+            position: absolute;
+            width: 100px;
+            height: 30px;
+            right: 30px;
+            bottom: 5px;
+        }
+
         .file-upload {
             position: absolute;
             bottom: 10px;

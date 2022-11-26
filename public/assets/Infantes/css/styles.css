@@ -327,7 +327,8 @@ table thead tr th{
                 width: 100px;
                 height: 30px;
                 position: absolute;
-                bottom: 5px;
+                top: 100px;
+                left: 0;
                 background-color: #ff004c;
                 border-color: #3295ff;
                 border-radius: 5px;

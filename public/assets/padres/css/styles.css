@@ -120,7 +120,7 @@ table thead tr th{
         border-radius: 10px;
         position: relative;
         margin: 0 auto;
-        top: 150px;
+        top: 10px;
         width: 600px;
         height: 500px;
     }
@@ -203,6 +203,17 @@ table thead tr th{
                     height: 30px;
                     font-size: 20px;
                 }
+
+                .modal-bg .modal-container .modal-box form .datos-actividad .select-infante {
+                    position: relative;
+                    top: 10px;
+                    width: 50%;
+                }
+    
+                    .modal-bg .modal-container .modal-box form .datos-actividad .select-infante select {
+                        width: 100%;
+                        height: 30px;
+                    }
 
             .modal-bg .modal-container .modal-box .botones-accion {
                 position: absolute;
@@ -296,6 +307,17 @@ table thead tr th{
                 font-size: 15px;
                 height: 10px;
             }
+
+            .modal-visualizar_bg .modal-visualizar_container .modal-visualizar_box .select-infante {
+                position: relative;
+                top: 10px;
+                width: 50%;
+            }
+
+                .modal-visualizar_bg .modal-visualizar_container .modal-visualizar_box .select-infante select {
+                    width: 100%;
+                    height: 30px;
+                }
 
 
 
