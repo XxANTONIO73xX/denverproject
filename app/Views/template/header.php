@@ -29,8 +29,7 @@
                 <li><a href="https://denvermx.online/public/curriculum"><i class="fa-regular fa-clipboard"></i> Curriculum</a></li>
                 <li><a href="https://denvermx.online/public/padres">Padres</a></li>
                 <li><a href="https://denvermx.online/public/infantes">Infantes</a></li>
-                <li><a href="#">Progreso</a></li>
-                <li><a href="#">Evaluar</a></li>
+                <li><a href="https://denvermx.online/public/progreso">Progreso</a></li>
             </ul>
         </nav>
     </aside>

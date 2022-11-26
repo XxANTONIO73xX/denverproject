@@ -33,16 +33,15 @@ class Padre extends ResourceController{
         $padre = $this->model->find($id);
         $infanteModel = new InfanteModel();
         $data=[
-            "padres" => [
+            "padre" => [
                 "id" => $padre["id"],
                 "nombre" => $padre["nombre"],
                 "apellido" => $padre["apellido"],
-                "edad" => $padre["edad"],
                 "direccion" => $padre["direccion"],
                 "telefono" => $padre["telefono"],
                 "correo" => $padre["correo"],
                 "pass" => $padre["pass"],
-                "idInfante" => $infanteModel->find($padre["idInfante"])
+                "infante" => $infanteModel->find($padre["idInfante"])
             ]            
         ];
         return $this->respond($data);

@@ -1,7 +1,12 @@
 <?php
 namespace App\Controllers;
+
+use App\Models\ActividadModel;
+use App\Models\InfanteModel;
+use App\Models\PadreModel;
 use CodeIgniter\RESTful\ResourceController;
 use App\Models\RespuestaModel;
+use App\Models\TopicoModel;
 use CodeIgniter\Commands\Help;
 use CodeIgniter\HTTP\Response;
 
@@ -9,16 +14,43 @@ class Respuesta extends ResourceController{
     protected $modelName = 'App\Models\RespuestaModel';
     protected $format = 'json';
 
-    public function index()
-    {
-        $data=[
-            "respuestas" => $this->model->findAll()
-        ];
+    public function index(){
+        $respuestas = $this->model->findAll();
+        $padreModel = new PadreModel();
+        $actividadModel = new ActividadModel();
+        $topicoModel = new TopicoModel();
+        $infanteModel = new InfanteModel();
+        $data["respuestas"] = [];
+        foreach($respuestas as $respuesta){
+            $padre = $padreModel->find($respuesta["idPadre"]);
+            $data["respuestas"][] = [
+                "id" => $respuesta["id"],
+                "padre" => $padre,
+                "infante" => $infanteModel->find($padre["idInfante"]),
+                "topico" => $topicoModel->find($respuesta["idTopico"]),
+                "actividad"=> $actividadModel->find($respuesta["idActividad"]),
+                "respuestaUsuario" => $respuesta["respuestaUsuario"],
+                "evidencia" => $respuesta["evidencia"]
+            ];
+        }
         return $this->respond($data);
     }
 
     public function show($id=NULL){
-        $data=["respuesta" => $this->model->find($id)];
+        $respuesta = $this->model->find($id);
+        $padreModel = new PadreModel();
+        $actividadModel = new ActividadModel();
+        $topicoModel = new TopicoModel();
+        $data=[
+            "respuesta" => [
+                "id" => $respuesta["id"],
+                "padre" => $padreModel->find($respuesta["idPadre"]),
+                "topico" => $topicoModel->find($respuesta["idTopico"]),
+                "actividad"=> $actividadModel->find($respuesta["idActividad"]),
+                "respuestaUsuario" => $respuesta["respuestaUsuario"],
+                "evidencia" => $respuesta["evidencia"]
+            ]
+        ];
         return $this->respond($data);
     }
 

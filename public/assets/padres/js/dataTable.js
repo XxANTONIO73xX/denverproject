@@ -135,7 +135,7 @@ $(document).ready( function () {
                     </div>
                     <div class="infante-padre">
                         <div class="infante">
-                            <h3>${data.infante.nombre}</h3>
+                            <h3>${data.padre.infante.nombre}</h3>
                         </div>
                     </div>
                     <div class="botones">

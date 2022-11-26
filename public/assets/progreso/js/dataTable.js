@@ -47,18 +47,24 @@ modalClose.addEventListener('click', function () {
 $(document).ready( function () {
     var table = $('#table').DataTable({
         ajax: {
-            "url": 'https://denvermx.online/public/infante',
-            "dataSrc": 'infantes',
+            "url": 'https://denvermx.online/public/respuesta',
+            "dataSrc": 'respuestas',
             "type":'GET'
         },
         columns:[
             {"data": 'id'},
-            {"data": 'nombre'},
-            {"data": 'apellidos'},
-            {"data": 'edad'},
-            {"data": 'curp'},
-            {"data": 'diagnostico'},
-            {"targets": -1, "data":null, "defaultContent":'<button onclick="abrirModalEditar()" id="editar" name="editar"><i class="fa-solid fa-pen-to-square"></i></button> <button id="eliminar" name="eliminar"><i class="fa-solid fa-trash"></i></i></button> <button id="ver" name="ver"><i class="fa-solid fa-eye"></i></button>'},
+            {"data": 'padre.nombre'},
+            {"data": 'infante.nombre'},
+            {"data": 'topico.nivel'},
+            {"data": 'topico.nombre'},
+            {"data": 'actividad.id'},
+            {"data": 'respuestaUsuario'},
+            {
+                "data":'evidencia',
+                "render": function(data){
+                    return `<button id="ver" name="ver" type="submit" onclick="window.open('${data}')"><i class="fa-solid fa-eye"></i></button>`
+                }
+            },
         ]
     });
     $('#table tbody').on('click', "button[name='eliminar']", function(){
@@ -75,12 +81,12 @@ $(document).ready( function () {
             if (result.isConfirmed) {
                 var data = table.row($(this).parents('tr')).data();
                 $.ajax({
-                    url: 'https://denvermx.online/public/infante/' + data.id,
+                    url: 'https://denvermx.online/public/padre/' + data.id,
                     type: 'DELETE',
                     dataType: "json",
                 })
                     .done(function (data, res) {
-                        console.log("El infante ha sido eliminado con exito");
+                        console.log("El padre ha sido eliminado con exito");
                     
                         Swal.fire(
                             '¡Borrado!',
@@ -94,51 +100,9 @@ $(document).ready( function () {
                     
                     })
                     .fail(function () {
-                        console.log("Error", "Ocurrio un problema al eliminar el infante")
+                        console.log("Error", "Ocurrio un problema al eliminar el padre")
                     })
             }
         });
     });
-
-    $('#table tbody').on('click', "button[name='ver']", function(){
-        var modalBg = document.querySelector('.modal-visualizar_bg');
-        modalBg.classList.add('bg-active-vis');
-        var data = table.row($(this).parents('tr')).data();
-    
-        $.ajax({
-            url: 'https://denvermx.online/public/infante/' + data.id,
-            data:{},
-            type: "GET",
-            dataType: "json"
-        })
-        .done(function(data, res) {
-            
-            modalBg.innerHTML = `
-            <div class="modal-visualizar_container">
-                <div class="modal-visualizar_box">
-                    <div class="nombre-infante">
-                        <h3>${data.infante.nombre}</h3>
-                    </div>
-                    <div class="apellidos-infante">
-                        <h3>${data.infante.apellidos}</h3>
-                    </div>
-                    <div class="edad-infante">
-                        <p>${data.infante.edad}</p>
-                    </div>
-                    <div class="curp-infante">
-                        <p>${data.infante.curp}</p>
-                    </div>
-                    <div class="diagnostico-infante">
-                        <p>${data.infante.diagnostico}</p>
-                    </div>
-                    <div class="botones-accion">
-                        <button onclick="cerrarModalVisualizar()" class="btn-cancelar">Cancelar</button>
-                    </div>
-                </div>
-            </div>`;
-        }); 
-    });
 });
-
-
-

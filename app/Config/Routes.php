@@ -39,6 +39,8 @@ $routes->get('/', 'Home::index');
 $routes->get('/curriculum', 'Curriculum::index');
 $routes->get('/padres', 'Padres::index');
 $routes->get('/infantes', 'Infantes::index');
+$routes->get('/progreso', 'Progreso::index');
+
 $routes->resource('terapeuta');
 $routes->post('terapeuta/update/(:segment)', 'Terapeuta::update/$1');
 $routes->post('terapeuta/login', 'Terapeuta::login');
