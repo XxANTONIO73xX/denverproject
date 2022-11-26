@@ -117,35 +117,36 @@ $(document).ready( function () {
             
             modalBg.innerHTML = `
             <div class="modal-visualizar_container">
-            <div class="modal-visualizar_box">
-                <div class="nombre-padre">
-                    <h2>${data.padre.nombre}</h2>
-                </div>
-                <div class="apellido-padre">
-                    <p>${data.padre.apellido}</p>
-                </div>
-                <div class="direccion-padre">
-                    <p>${data.padre.direccion}</p>
-                </div>
-                <div class="telefono-padre">
-                    <p>${data.padre.telefono}</p>
-                </div>
-                <div class="correo-padre">
-                    <p>${data.padre.correo}</p>
-                </div>
-                <div class="infante-padre">
-                    <div class="infante">
-                        <h3>${data.infante.nombre}</h3>
+                <div class="modal-visualizar_box">
+                    <div class="nombre-padre">
+                        <h2>${data.padre.nombre}</h2>
+                    </div>
+                    <div class="apellido-padre">
+                        <p>${data.padre.apellido}</p>
+                    </div>
+                    <div class="direccion-padre">
+                        <p>${data.padre.direccion}</p>
+                    </div>
+                    <div class="telefono-padre">
+                        <p>${data.padre.telefono}</p>
+                    </div>
+                    <div class="correo-padre">
+                        <p>${data.padre.correo}</p>
+                    </div>
+                    <div class="infante-padre">
+                        <div class="infante">
+                            <h3>${data.infante.nombre}</h3>
+                        </div>
+                    </div>
+                    <div class="botones">
+                        <button onclick="cerrarModalVisualizar()" class="btn-cancelar">Cancelar</button>
                     </div>
                 </div>
-                <div class="botones">
-                    <button onclick="cerrarModalVisualizar()" class="btn-cancelar">Cancelar</button>
-                </div>
-            </div>
-        </div>`;
+            </div>`;
         }); 
     });
 });
+
 $.ajax({
     type: "GET",
     url: "https://denvermx.online/public/infante",

@@ -115,24 +115,27 @@ $(document).ready( function () {
             
             modalBg.innerHTML = `
             <div class="modal-visualizar_container">
-            <div class="modal-visualizar_box">
-                <div class="nombre-infante">
-                    <h3>${data.infante.nombre}</h3>
+                <div class="modal-visualizar_box">
+                    <div class="nombre-infante">
+                        <h3>${data.infante.nombre}</h3>
+                    </div>
+                    <div class="apellidos-infante">
+                        <h3>${data.infante.apellidos}</h3>
+                    </div>
+                    <div class="edad-infante">
+                        <p>${data.infante.edad}</p>
+                    </div>
+                    <div class="curp-infante">
+                        <p>${data.infante.curp}</p>
+                    </div>
+                    <div class="diagnostico-infante">
+                        <p>${data.infante.diagnostico}</p>
+                    </div>
+                    <div class="botones-accion">
+                        <button onclick="cerrarModalEditar()" class="btn-cancelar">Cancelar</button>
+                    </div>
                 </div>
-                <div class="apellidos-infante">
-                    <h3>${data.infante.apellidos}</h3>
-                </div>
-                <div class="edad-infante">
-                    <p>${data.infante.edad}</p>
-                </div>
-                <div class="curp-infante">
-                    <p>${data.infante.curp}</p>
-                </div>
-                <div class="diagnostico-infante">
-                    <p>${data.infante.diagnostico}</p>
-                </div>
-            </div>
-        </div>`;
+            </div>`;
         }); 
     });
 });
