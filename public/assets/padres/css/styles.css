@@ -319,7 +319,26 @@ table thead tr th{
                     height: 30px;
                 }
 
-
+                .modal-visualizar_bg .modal-visualizar_container .modal-visualizar_box .botones {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    height: 50px;
+                }
+        
+                    .modal-visualizar_bg .modal-visualizar_container .modal-visualizar_box .botones button {
+                        width: 100px;
+                        height: 30px;
+                        position: absolute;
+                        top: 110px;
+                        left: 0;
+                        background-color: #ff004c;
+                        border-color: #3295ff;
+                        border-radius: 5px;
+                        border: none;
+                        color: white;
+                        transition: 0.25s;
+                    }
 
         /*--------------------------------------------------------------------------*
             .modal-visualizar_bg .modal-visualizar_container .modal-visualizar_box .nombre-actividad {
