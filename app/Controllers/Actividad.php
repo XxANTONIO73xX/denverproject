@@ -18,7 +18,6 @@ class Actividad extends ResourceController{
                 "nombre" => $actividad["nombre"],
                 "descripcion" => $actividad["descripcion"],
                 "topico" => $topicoModel->find($actividad["idTopico"]),
-                "ejemplo" => $actividad["ejemplo"]
             ];
         }
         return $this->respond($data);
@@ -77,7 +76,6 @@ class Actividad extends ResourceController{
     }
 
     public function update($id = NULL){
-        helper(['form', 'array']);
         $data = [];
         if(!empty($this->request->getPost("nombre")))
             $data["nombre"] = $this->request->getPost("nombre");
@@ -85,16 +83,7 @@ class Actividad extends ResourceController{
             $data["descripcion"] = $this->request->getPost("descripcion");
         if(!empty($this->request->getPost("idTopico")))
             $data["idTopico"] = $this->request->getPost("idTopico");
-        if(!empty($this->request->getFile('ejemplo'))){
-            $fileName = dot_array_search('ejemplo.name', $_FILES);
-            $file = $this->request->getFile('ejemplo');
-            if(! $file->isValid())
-            return $this->fail($file->getErrorString());
-            $file->move('./uploads/ejemplos');
-            $data["ejemplo"] = "https://denvermx.online/public/uploads/ejemplos/".$file->getName();
-        }
         $result = $this->model->update($id, $data);
-
         if($result){
             return $this->respond(["result" => "El registro se edito correctamente", "actividad" => $this->model->find($id)]);
         }else{

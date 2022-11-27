@@ -38,6 +38,38 @@ function agregar(id) {
             })
             
     } else {
-
+        $.ajax({
+            url: 'https://denvermx.online/public/infante/update/' + id,
+            type: 'POST',
+            data: {
+                "nombre": $("#nombre").val(),
+                "apellidos": $("#apellidos").val(),
+                "edad": $("#edad").val(),
+                "curp": $("#curp").val(),
+                "diagnostico": $("#diagnostico").val()
+            },
+            dataType: "json",
+        })
+            .done(function (data, res) {
+                if (data.hasOwnProperty('error')) {
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'error',
+                        title: 'Ha ocurrido un error',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                } else {
+                    Swal.fire({
+                        position: 'center',
+                        icon: 'success',
+                        title: 'Se ha editado correctamente',
+                        showConfirmButton: false,
+                        timer: 1500
+                    }).then(function () {
+                        window.location.reload()
+                    });
+                }
+            })
     }
 }

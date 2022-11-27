@@ -138,6 +138,23 @@ $(document).ready( function () {
             </div>`;
         }); 
     });
+
+    $('#table tbody').on('click', "button[name='editar']", function(){
+        var dataTable = table.row($(this).parents('tr')).data();
+        $.ajax({
+            url: 'https://denvermx.online/public/infante/' + dataTable.id,
+            data:{},
+            type: "GET",
+            dataType: "json"
+        }).done(function(data){
+            $("#nombre").val(data.infante.nombre),
+            $("#apellidos").val(data.infante.apellidos),
+            $("#edad").val(data.infante.edad),
+            $("#curp").val(data.infante.curp),
+            $("#diagnostico").val(data.infante.diagnostico)
+        })
+        $(".btn-agregar").attr("onclick", "agregar("+dataTable.id+")")
+    })
 });
 
 

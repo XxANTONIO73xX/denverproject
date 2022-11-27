@@ -145,6 +145,25 @@ $(document).ready( function () {
             </div>`;
         }); 
     });
+
+    $('#table tbody').on('click', "button[name='editar']", function(){
+        var dataTable = table.row($(this).parents('tr')).data();
+        $.ajax({
+            url: 'https://denvermx.online/public/padre/' + dataTable.id,
+            data:{},
+            type: "GET",
+            dataType: "json"
+        }).done(function(data){
+            $("#nombre").val(data.padre.nombre),
+            $("#apellido").val(data.padre.apellido),
+            $("#direccion").val(data.padre.direccion),
+            $("#telefono").val(data.padre.telefono),
+            $("#correo").val(data.padre.correo),
+            $("#pass").val(data.padre.pass),
+            $("#select_infante").val(data.padre.infante.id)
+        })
+        $(".btn-agregar").attr("onclick", "agregar("+dataTable.id+")")
+    })
 });
 
 $.ajax({
