@@ -1,56 +1,17 @@
-# CodeIgniter 4 Framework
+# denverproject
+The denver project tries to turn the denver method for children with autism into a web tool accessible to everyone.
 
-## What is CodeIgniter?
+# What is the Denver model?
+The Denver model is a practical method applied in early care with the aim of prioritizing empirical-scientific knowledge in the study of child development. It is applicable only to children between 12 months and about five years old. And its main feature is its scientific nature: it flees from a more emotional perception to focus on scientific evidence and analyze the effects and causes-consequences of the application of actions.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](http://codeigniter.com).
+![Image 1](https://www.bloghoptoys.es/wp-content/uploads/2016/10/Sans-titre-620x3501.png)
 
-This repository holds the distributable version of the framework,
-including the user guide. It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+# Benefits of early intervention
+The Denver method seeks to take advantage of brain plasticity (ability to adapt and brain reeducation) that children under 6 years of age have; a very important aspect even in newborns. Brain plasticity refers to the ability of the nervous system to change its structure and functioning throughout life, as a reaction to the diversity of the environment. By acting early, it is possible to effectively stimulate the neural network involved in social behavior and complex behavior, which is called "behavioral plasticity".
 
-More information about the plans for version 4 can be found in [the announcement](http://forum.codeigniter.com/thread-62615.html) on the forums.
+![Image 2](https://www.bloghoptoys.es/wp-content/uploads/2016/06/beb%C3%A9s-jugando-e1465206198915.jpg)
 
-The user guide corresponding to this version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+# What does the Denver Method consist of?
+The stimulation session program is established based on the level of development of the child, which is evaluated from a document that we call a “curriculum”. This indicates the behaviors that must be achieved according to the child's age and according to the part that is to be developed: communication, motor skills, autonomy... With this evaluation, the professionals can then set the objectives, to subsequently carry out a treatment and a personalized assessment.
 
-
-## Important Change with index.php
-
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
-
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Contributing
-
-We welcome contributions from the community.
-
-Please read the [*Contributing to CodeIgniter*](https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md) section in the development repository.
-
-## Server Requirements
-
-PHP version 7.4 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php)
-- xml (enabled by default - don't turn it off)
+![Image 2](https://www.pictoaplicaciones.com/wp-content/uploads/2020/09/3477989-768x569.jpg)
