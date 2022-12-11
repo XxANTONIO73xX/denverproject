@@ -15,3 +15,8 @@ The Denver method seeks to take advantage of brain plasticity (ability to adapt 
 The stimulation session program is established based on the level of development of the child, which is evaluated from a document that we call a “curriculum”. This indicates the behaviors that must be achieved according to the child's age and according to the part that is to be developed: communication, motor skills, autonomy... With this evaluation, the professionals can then set the objectives, to subsequently carry out a treatment and a personalized assessment.
 
 ![Image 2](https://www.pictoaplicaciones.com/wp-content/uploads/2020/09/3477989-768x569.jpg)
+
+# Screenshots
+
+![terapeuta](readmeImages/terapeuta.png)
+![padre](readmeImages/padre.png)
